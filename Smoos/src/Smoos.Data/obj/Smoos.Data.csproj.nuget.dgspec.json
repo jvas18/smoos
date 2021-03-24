@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\Smoos.Data\\Smoos.Data.csproj": {}
+    "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\Smoos.Data\\Smoos.Data.csproj": {
+    "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\Smoos.Data\\Smoos.Data.csproj",
+        "projectUniqueName": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj",
         "projectName": "Smoos.Data",
-        "projectPath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\Smoos.Data\\Smoos.Data.csproj",
+        "projectPath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj",
         "packagesPath": "C:\\Users\\jvict\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\Smoos.Data\\obj\\",
+        "outputPath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",

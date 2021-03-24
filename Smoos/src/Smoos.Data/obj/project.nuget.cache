@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "JQecgqE/Zcp0v3krxpRGWygHZ9pCG7DMuEJblu5pEJHEmh0QrZ3KfhmbePhbE5vE494xO+bw1Pc+f63VIJKiAw==",
+  "dgSpecHash": "1yYJchCE3bNcoWA5AjY0N/JmoeBtbLakOU+BzUmpJ3+8BSCo1BAlH9iObXa6s91D01BaW82LSNRrvC45qa7JBw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\Smoos.Data\\Smoos.Data.csproj",
+  "projectFilePath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\jvict\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
     "C:\\Users\\jvict\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
