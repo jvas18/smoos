@@ -9,7 +9,7 @@ body {
     background-color: #fff;
     position: absolute;
     width: 440px;
-    height: fit-content;
+    height: 550px;
     left: 120px;
     top: 40px;
     border-radius: 50px;
@@ -68,3 +68,21 @@ h1 {
     left: 680px;
     height: 310px;
 }
+.password-input{
+    border-radius: 10px;
+    width: 320px;
+    height: 40px;
+    background-color: #C4C4C4;
+    border-width: 0px;
+    box-shadow: 0 0 10px #C4C4C4;
+    font-family: Raleway;
+    font-weight: medium;
+    font-size: 20px;
+    color: #161618;
+    background-image:url(../../assets/icons/eye-password-icon.svg); 
+    background-repeat: no-repeat; 
+    background-position: 285px;
+}
+.wave{
+    padding-left: 1009px;
+} 

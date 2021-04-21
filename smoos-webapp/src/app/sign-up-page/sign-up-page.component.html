@@ -14,18 +14,21 @@
                 </div>
                 <div style="position: relative; top: 25px">
                     <label class="label" for="email">Senha:*</label> <br>
-                    <input class="input" id="password" formControlName="password" type="password"><br>
+                    <input class="password-input" id="password" formControlName="password" type="password"><br>
                     <span class="error" *ngIf="form.controls.password?.errors?.required && (form.controls.password?.dirty || form.controls.password?.touched)"><i class="fa fa-remove"></i> Senha é obrigatória</span>
                 </div>
                 <div style="position: relative; top: 35px">
                     <label class="label" for="email"> Confirmar senha:*</label> <br>
-                    <input class="input" id="password" formControlName="confirmPassword" type="password"><br>
+                    <input class="password-input" id="password" formControlName="confirmPassword" type="password"><br>
                     <span class="error" *ngIf="form.controls.confirmPassword?.errors?.required && (form.controls.confirmPassword?.dirty || form.controls.confirmPassword?.touched)"><i class="fa fa-remove"></i> As senhas não conferem</span>
                 </div>
                 <div style="position: relative; top: 60px; left: 75px;">
                     <button class="button" type="submit">Entrar</button>
                 </div>
             </form>
+        </div>
+        <div>
+            <img class="wave" src="assets\imgs\wave.png">
         </div>
         <div>
             <img class="image" src="assets\imgs\Amigos - Design Jam.png">
