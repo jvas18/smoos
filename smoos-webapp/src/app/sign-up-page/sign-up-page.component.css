@@ -1,0 +1,70 @@
+body {
+    background-color: #161618;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+.cadastro-box {
+    background-color: #fff;
+    position: absolute;
+    width: 440px;
+    height: fit-content;
+    left: 120px;
+    top: 40px;
+    border-radius: 50px;
+    box-shadow: 0 0 5px #fff;
+}
+.form-fieds{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 13%;
+    margin-top: 10%;
+    flex-wrap: wrap;
+}
+h1 {
+    position: relative;
+    top: 25px;
+    left: 60px;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 42px;
+    color: #161618;
+}
+.label {
+
+    font-family: Raleway;
+    font-weight: medium;
+    font-size: 22px;
+    color: #161618;
+}
+.input {
+    border-radius: 10px;
+    width: 320px;
+    height: 40px;
+    background-color: #C4C4C4;
+    border-width: 0px;
+    box-shadow: 0 0 10px #C4C4C4;
+    font-family: Raleway;
+    font-weight: medium;
+    font-size: 20px;
+    color: #161618;
+    
+}
+.button {
+    border-radius: 50px;
+    width: 155px;
+    height: 45px;
+    background-color: #C4C4C4;
+    border-width: 0px;
+    font-family: Raleway;
+    font-weight: medium;
+    font-size: 22px;
+    color: #fff;
+}
+.image {
+    position: absolute;
+    top: 260px;
+    left: 680px;
+    height: 310px;
+}

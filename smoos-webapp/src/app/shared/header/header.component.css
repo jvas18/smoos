@@ -1,0 +1,56 @@
+
+body, ul, li{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+    font-family: Raleway;
+    color: #fff;
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+.logo{
+    position: inherit;
+    width: 220px;
+    height: 80px;
+}
+.profile {
+    width: 70px;
+    height: 70px;
+    border-radius: 50px;
+    background-color: #C4C4C4;
+}
+.search{
+    border-radius: 10px;
+    width: 250px;
+    height: 35px;
+    background-color: #C4C4C4;
+    border-width: 0px;
+    box-shadow: 0 0 5px #C4C4C4;
+    font-family: Raleway;
+    font-size: 18px;
+    font-weight: normal;
+}
+.search:focus{
+    box-shadow: none;
+    outline: 0;
+}
+.header{
+    display: flex;
+    justify-content: space-between;
+    padding: 25px;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.menu{
+    display: flex;
+}
+.menu li{
+    margin: 5px;
+}
+.menu li a{
+    display: block;
+    padding: 10px;
+}
