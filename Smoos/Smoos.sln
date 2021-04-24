@@ -9,11 +9,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "02-Domain", "02-Domain", "{
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "03-Infra", "03-Infra", "{E2BAA3F9-CDD3-42B5-BEBF-E2860388B8E7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smoos.Api", "src\Smoos.Api\Smoos.Api.csproj", "{2DFA77BD-4504-4D57-83D1-9A6C2D7707F4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smoos.Api", "src\Smoos.Api\Smoos.Api.csproj", "{2DFA77BD-4504-4D57-83D1-9A6C2D7707F4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smoos.Domain", "src\Smoos.Domain\Smoos.Domain.csproj", "{93D558A0-C35C-440F-A617-F75EDF097B0C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smoos.Domain", "src\Smoos.Domain\Smoos.Domain.csproj", "{93D558A0-C35C-440F-A617-F75EDF097B0C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Smoos.Data", "src\Smoos.Data\Smoos.Data.csproj", "{356DB527-6E5D-4F54-88B8-4AFA29E8EB3F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Smoos.Data", "src\Smoos.Data\Smoos.Data.csproj", "{356DB527-6E5D-4F54-88B8-4AFA29E8EB3F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

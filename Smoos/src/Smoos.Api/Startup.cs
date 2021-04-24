@@ -1,5 +1,8 @@
+using Jwks.Manager.AspNetCore;
 using Microsoft.AspNetCore.Builder;
+using Microsoft.AspNetCore.Cors.Infrastructure;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -7,17 +10,24 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
+using Smoos.Data;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.EntityFrameworkCore.SqlServer;
+using Microsoft.EntityFrameworkCore;
+using Smoos.Api._Config;
 
 namespace Smoos.Api
 {
     public class Startup
     {
-        public Startup(IConfiguration configuration)
+        private IWebHostEnvironment Env;
+
+        public Startup(IWebHostEnvironment env, IConfiguration configuration)
         {
+            Env = env;
             Configuration = configuration;
         }
 
@@ -28,9 +38,20 @@ namespace Smoos.Api
         {
 
             services.AddControllers();
+            services.AddDbContext<SmoosContext>(options =>
+            {
+                options.UseSqlServer(Configuration.GetConnectionString("Default"));
+
+                if (Env.IsDevelopment())
+                    options.EnableSensitiveDataLogging(true);
+            });
+            services.AddScoped<SmoosContext>();
+            services.AppAddAuthorization(Configuration, Env);
+            services.AppAddMediator();
+            services.AppAddIoCServices(Configuration, Env);
             services.AddSwaggerGen(c =>
             {
-                c.SwaggerDoc("v1", new OpenApiInfo { Title = "Smoos.Api", Version = "v1" });
+                c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApplication1", Version = "v1" });
             });
         }
 
@@ -41,11 +62,11 @@ namespace Smoos.Api
             {
                 app.UseDeveloperExceptionPage();
                 app.UseSwagger();
-                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "Smoos.Api v1"));
+                app.UseSwaggerUI(c => c.SwaggerEndpoint("/swagger/v1/swagger.json", "WebApplication1 v1"));
             }
 
             app.UseHttpsRedirection();
-
+             
             app.UseRouting();
 
             app.UseAuthorization();

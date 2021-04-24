@@ -1,7 +1,28 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Albums\NewFile1.txt" />
+    <None Remove="NewFile1.txt" />
+    <None Remove="Ratings\NewFile1.txt" />
+    <None Remove="Songs\NewFile1.txt" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation" Version="9.5.3" />
+    <PackageReference Include="Jwks.Manager.Store.EntityFrameworkCore" Version="4.0.4" />
+    <PackageReference Include="MediatR" Version="9.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.4" />
+    <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.10.2" />
+    <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.10.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Albums\Commands\" />
+    <Folder Include="Users\Messages\" />
+  </ItemGroup>
 
 </Project>

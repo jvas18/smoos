@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "4FPD2D9Qhj5+Gq1PBHJd5T/tDln9PgD5iCHFAwxuShxEREY/x57EyhL2Tey2N+fdc7hQIj3pcWzlvfQaIf/XEQ==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Core\\Smoos.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\jvict\\.nuget\\packages\\microsoft.netcore.app.ref\\3.1.0\\microsoft.netcore.app.ref.3.1.0.nupkg.sha512",
+    "C:\\Users\\jvict\\.nuget\\packages\\microsoft.windowsdesktop.app.ref\\3.1.0\\microsoft.windowsdesktop.app.ref.3.1.0.nupkg.sha512"
+  ],
+  "logs": []
+}
