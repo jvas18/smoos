@@ -1,9 +1,6 @@
 body{
-    color: #161618;
+    background-color: #161618;
 }
-.background{
-    background:#161618 ;
-   }
 .nav-bar{
     position: absolute;
     width: 1305px;
@@ -16,7 +13,6 @@ body{
     width: 228.43px;
     height: 84px;
 }
-
 #entrar-btn{
     width: 150px;
     height: 45px;
@@ -26,17 +22,15 @@ body{
     left: 950px;
     border-radius: 50px;
 }
-
 #entrar{
     color: #fff;
-    top: 10px;
-    left: 45px;
     position: relative;
+    top: 6px;
+    left: 46px;
     font-family: Raleway;
     font-weight: semibold;
     font-size: 22px;
 }
-
 #cadastrar-btn{
     width: 185px;
     height: 48px;
@@ -47,18 +41,16 @@ body{
     border: 3px solid #C4C4C4;
     border-radius: 50px;
 }
-
 #cadastrar{
     color: #fff;
-    top: 8px;
-    left: 28px;
+    top: 5px;
+    left: 25px;
     position: relative;
     font-family: Raleway;
     font-weight: semibold;
     font-size: 22px;
     text-align: center;
 }
-
 .home-title{
     color: #fff;
     font-family: Raleway;
@@ -66,7 +58,6 @@ body{
     font-size: 58px;
     line-height: normal;
 }
-
 .home-subtitle{
     color: #C4C4C4;
     position: relative;
@@ -74,7 +65,6 @@ body{
     font-weight: lighter;
     font-size: 16px;
 }
-
 #home-entrar-btn{
     width: 155px;
     height: 45px;
@@ -82,22 +72,16 @@ body{
     position: absolute;
     border-radius: 5px;
 }
-
 #home-entrar{
     color: #fff;
-    top: 13px;
+    top: 9px;
     left: 55px;
     position: relative;
     font-family: Raleway;
     font-weight: bold;
     font-size: 18px;
 }
-.error{
-    color: rgb(247, 9, 9);
-}
+
 .home-image{
     height: 430px;
 }
-
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

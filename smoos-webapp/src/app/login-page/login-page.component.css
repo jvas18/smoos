@@ -1,0 +1,73 @@
+body {
+    background-color: #fff;
+    margin-top: 0px;
+    margin-right: 0px;
+    margin-bottom: 0px;
+    margin-left: 0px;
+}
+.image-block {
+    height: 625px;
+    width: 683px;
+    background-color: #161618;
+    border-top-right-radius: 50px;
+    border-bottom-right-radius: 50px;
+    box-shadow: 0 0 10px #161618;
+}
+.image {
+    position: absolute;
+    top: 230px;
+    left: 200px;
+}
+.login-session {
+    position: absolute;
+    top: 30px;
+    left: 830px;
+}
+.login-bg{
+    background-color: #fff;
+}
+.error{
+    color: rgb(253, 40, 40)
+}
+h1 {
+    position: relative;
+    top: 10px;
+    font-family: Raleway;
+    font-weight: extrabold;
+    font-size: 48px;
+    color: #161618;
+}
+p {
+    position: absolute;
+    top: 530px;
+    left: 820px;
+    font-family: Raleway;
+    font-weight: medium;
+    font-size: 20px;
+    color: #161618;
+}
+.label {
+    font-family: Raleway;
+    font-weight: medium;
+    font-size: 28px;
+    color: #161618;
+}
+.input {
+    border-radius: 10px;
+    width: 320px;
+    height: 40px;
+    background-color: #C4C4C4;
+    border-width: 0px;
+    box-shadow: 0 0 10px #C4C4C4;
+}
+.button {
+    border-radius: 50px;
+    width: 155px;
+    height: 45px;
+    background-color: #C4C4C4;
+    border-width: 0px;
+    font-family: Raleway;
+    font-weight: medium;
+    font-size: 22px;
+    color: #fff;
+}

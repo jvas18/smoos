@@ -1,0 +1,45 @@
+    <div class="login-bg"> 
+        <div class="image-block">
+            <img class="image" src="assets\imgs\Stuck at Home - Movie Time (3).png">
+        </div>
+        <div class="login-session">
+            <h1>Login</h1>
+            <form [formGroup]="form" novalidate> 
+                <div style="position: relative; top: 45px">
+                    <label class="label" for="email">Email:*</label> <br>
+                    <input class="input" id="email" formControlName="email" type="text"><br>
+                    <span class="error" *ngIf="form.controls.email?.errors?.required && (form.controls.email?.dirty || form.controls.email?.touched)"><i class="fa fa-remove"></i> Email é obrigatório</span>
+                </div>
+                <div style="position: relative; top: 85px">
+                    <label class="label" for="email">Senha:*</label> <br>
+                    <input id="senha" class="input" type="password" formControlName="password"/>
+                    <span id="olho" class="fa fa-eye"></span>
+                    <br>
+                    <span class="error" *ngIf="form.controls.password?.errors?.required && (form.controls.password?.dirty || form.controls.password?.touched)"><i class="fa fa-remove"></i> Senha é obrigatória</span>
+                </div>
+                <div>
+                    <button class="button" style="position: relative; top: 150px; left: 85px" type="submit">Entrar</button>
+                </div>
+            </form>
+        </div>
+        <p>Não possui uma conta? <a style="color: #c4c4c4; text-decoration: none; font-weight: bold;" [routerLink]="['/sign-up']">Cadastre-se</a></p>
+    </div>
+
+
+    <script>
+           var senha = $('#senha');
+            var olho= $("#olho");
+
+            olho.mousedown(function() {
+            senha.attr("type", "text");
+            });
+
+            olho.mouseup(function() {
+            senha.attr("type", "password");
+            });
+            // para evitar o problema de arrastar a imagem e a senha continuar exposta, 
+            //citada pelo nosso amigo nos comentários
+            $( "#olho" ).mouseout(function() { 
+            $("#senha").attr("type", "password");
+            });
+    </script>
