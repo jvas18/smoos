@@ -48,7 +48,19 @@ namespace Smoos.Api
             services.AddScoped<SmoosContext>();
             services.AppAddAuthorization(Configuration, Env);
             services.AppAddMediator();
+            services.AddCors(options =>
+            {
+                options.AddPolicy("AllowSpecificOrigin",
+                        builder =>
+                        {
+                            builder
+                            .AllowAnyOrigin()
+                            .AllowAnyMethod()
+                            .AllowAnyHeader();
+                        });
+            });
             services.AppAddIoCServices(Configuration, Env);
+           
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApplication1", Version = "v1" });
@@ -69,6 +81,8 @@ namespace Smoos.Api
              
             app.UseRouting();
 
+            app.UseAuthorization();
+            app.UseCors("AllowSpecificOrigin");
             app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>

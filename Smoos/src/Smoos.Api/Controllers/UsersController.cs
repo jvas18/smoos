@@ -13,7 +13,7 @@ using System.Threading.Tasks;
 
 namespace Smoos.Api.Controllers
 {
-    [Route("/user")]
+    [Route("/users")]
     [ApiController]
     public class UsersController : ControllerBase
     {

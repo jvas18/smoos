@@ -23,7 +23,7 @@
                     <span class="error" *ngIf="form.controls.confirmPassword?.errors?.required && (form.controls.confirmPassword?.dirty || form.controls.confirmPassword?.touched)"><i class="fa fa-remove"></i> As senhas não conferem</span>
                 </div>
                 <div style="position: relative; top: 60px; left: 75px;">
-                    <button class="button" type="submit">Entrar</button>
+                    <button class="button" type="submit" (click)="save()">Cadastrar</button>
                 </div>
             </form>
         </div>

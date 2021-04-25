@@ -10,10 +10,9 @@ namespace Smoos.Domain.Songs
 {
     public class Song : Work, IEntityType<Guid>
     {
-        public Song(Guid id, string name, string releaseYear,string duration, Album album, Guid artistId): base(id, name, releaseYear)
+        public Song(Guid id, string name, string releaseYear,string duration, Guid artistId): base(id, name, releaseYear)
         {
             Duration = duration;
-            Album = album;
             ArtistId = artistId;
         }
 

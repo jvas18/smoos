@@ -20,8 +20,15 @@ namespace Smoos.Domain.Users.Commands.Handlers
 
         public async Task<UserVm> Handle(CreateUser request, CancellationToken cancellationToken)
         {
-            if (_userRepository.Any(x => x.Email == request.Email))
-                throw new Exception("Email já cadastrado");
+            try
+            {
+                if (await _userRepository.AnyAsync(x => x.Email == request.Email))
+                    throw new Exception("Email já cadastrado");
+            }
+            catch(Exception e)
+            {
+
+            }
 
             var password = request.Password.GetHashCode().ToString();
             var user = await _userRepository.AddAsync(new User(Guid.NewGuid(), request.Name, request.Email, password, request.Picture, request.UserProfile));

@@ -18,7 +18,7 @@
                     <span class="error" *ngIf="form.controls.password?.errors?.required && (form.controls.password?.dirty || form.controls.password?.touched)"><i class="fa fa-remove"></i> Senha é obrigatória</span>
                 </div>
                 <div>
-                    <button class="button" style="position: relative; top: 150px; left: 85px" type="submit">Entrar</button>
+                    <button class="button" style="position: relative; top: 150px; left: 85px" [routerLink]="['/register-artist']"type="submit">Entrar</button>
                 </div>
             </form>
         </div>

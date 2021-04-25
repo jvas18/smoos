@@ -87,6 +87,8 @@ namespace Smoos.Data.Repositories
         {
             await _dbContext.Set<T>().AddAsync(entity);
 
+           await SaveChangesAsync();
+
              return entity;
 
         }

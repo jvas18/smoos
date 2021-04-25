@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+import { UserService } from '../../services/user.service';
 
 @Component({
   selector: 'app-sign-up-page',
@@ -8,7 +9,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 })
 export class SignUpPageComponent implements OnInit {
 
-  constructor() { }
+  constructor(private userService: UserService) { }
 
   form = new FormGroup({
     name: new FormControl('',[Validators.required]),
@@ -20,4 +21,11 @@ export class SignUpPageComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  save(){
+
+    this.userService.create(this.form.value).pipe(
+    ).subscribe(resp => {
+    });
+
+  }
 }

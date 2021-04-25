@@ -15,11 +15,11 @@ namespace Smoos.Domain.Albums
         public Guid ArtistId { get; set; }
         public ICollection<Song> Songs = new List<Song>();
 
-        public Album(Guid id, string name, string releaseYear,string duration, Guid artistId, ICollection<Song> songs): base(id, name, releaseYear)
+        public Album(Guid id, string name, string releaseYear,string duration, Guid artistId): base(id, name, releaseYear)
         {
             Duration = duration;
             ArtistId = artistId;
-            Songs = songs;
+           // Songs = songs;
         }
     }
 }

@@ -9,10 +9,9 @@ namespace Smoos.Domain.Movies
 {
     public class Movie : Work, IEntityType<Guid>
     {
-        public Movie(Guid id, string name, string releaseYear, string duration, ICollection<Artist> actors, string summary, string country, EMovieGenre movieGenres) : base(id, name, releaseYear)
+        public Movie(Guid id, string name, string releaseYear, string duration, string summary, string country, EMovieGenre movieGenres) : base(id, name, releaseYear)
         {
             Duration = duration;
-            Actors = actors;
             Summary = summary;
             Country = country;
             MovieGenres = movieGenres;

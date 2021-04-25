@@ -25,8 +25,9 @@ namespace Smoos.Domain.Movies.Commands.Handlers
         public async Task<MovieVm> Handle(CreateMovie request, CancellationToken cancellationToken)
         {
             var artists = _artistRepository.List(x => request.Actors.Contains(x.Id)).ToList();
-            var movie = await _movieRepository.AddAsync(new Movie(Guid.NewGuid(), request.Name, request.ReleaseYear, request.Duration, artists, request.Summary, request.Country, request.MovieGenres));
-
+            var movie = new Movie(Guid.NewGuid(), request.Name, request.ReleaseYear, request.Duration, request.Summary, request.Country, request.MovieGenres);
+            movie.Actors = artists;
+            movie = await _movieRepository.AddAsync(movie);
             return movie.ToVm();
         }
     }

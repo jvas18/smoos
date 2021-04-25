@@ -1,15 +1,16 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import { IndexSmoosComponent } from './backoffice/components/index-smoos/index-smoos.component';
+import { LoginPageComponent } from './backoffice/components/login-page/login-page.component';
 import { RegisterArtistComponent } from './backoffice/components/register-artist/register-artist.component';
 import { RegisterObraComponent } from './backoffice/components/register-obra/register-obra.component';
-import { IndexSmoosComponent } from './index-smoos/index-smoos.component';
-import { LoginPageComponent } from './login-page/login-page.component';
-import { SignUpPageComponent } from './sign-up-page/sign-up-page.component';
+import { SignUpPageComponent } from './backoffice/components/sign-up-page/sign-up-page.component';
+
 
 const routes: Routes = [
   {
     path: '',
-    component: IndexSmoosComponent  
+    component: IndexSmoosComponent
   },
   {
     path: 'login',
