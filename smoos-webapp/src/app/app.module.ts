@@ -10,6 +10,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatIconModule} from '@angular/material/icon';
 import {MultiSelectModule} from 'node_modules/primeng/multiselect';
 import {PasswordModule} from 'node_modules/primeng/password';
+import { DropdownModule } from 'primeng/dropdown';
 import { RegisterArtistComponent } from './backoffice/components/register-artist/register-artist.component';
 import { HeaderComponent } from './shared/header/header.component';
 import {CalendarModule} from 'primeng/calendar';
@@ -18,6 +19,8 @@ import { IndexSmoosComponent } from './backoffice/components/index-smoos/index-s
 import { LoginPageComponent } from './backoffice/components/login-page/login-page.component';
 import { SignUpPageComponent } from './backoffice/components/sign-up-page/sign-up-page.component';
 import { HttpClientModule } from '@angular/common/http';
+import { RegisterMovieComponent } from './backoffice/components/register-obra/register-movie/register-movie.component';
+import { RegisterBookComponent } from './backoffice/components/register-obra/register-book/register-book.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +30,9 @@ import { HttpClientModule } from '@angular/common/http';
     LoginPageComponent,
     SignUpPageComponent,
     RegisterArtistComponent,
-    HeaderComponent
+    HeaderComponent,
+    RegisterMovieComponent,
+    RegisterBookComponent
   ],
   imports: [
     BrowserModule,
@@ -39,6 +44,7 @@ import { HttpClientModule } from '@angular/common/http';
     BrowserAnimationsModule,
     MatMenuModule,
     MatIconModule,
+    DropdownModule,
     MultiSelectModule,
     CalendarModule,
     RadioButtonModule

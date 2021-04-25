@@ -13,7 +13,6 @@ namespace Smoos.Domain.Books
         Drama,
         Biography,
         Romance,
-        Musical,
         Comedy,
         Horror,
         RomCom

@@ -1,6 +1,7 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
 using Smoos.Domain.Books;
+using Smoos.Domain.Books.Commands;
 using Smoos.Domain.Movies.Commands;
 using System;
 using System.Collections.Generic;
@@ -23,7 +24,7 @@ namespace Smoos.Api.Controllers
         }
 
         [HttpPost]
-        public async Task<IActionResult> Post([FromBody] CreateMovie command)
+        public async Task<IActionResult> Post([FromBody] CreateBook command)
         {
             return command == null ?
               UnprocessableEntity()

@@ -20,40 +20,23 @@ interface Genre {
 })
 export class RegisterObraComponent implements OnInit {
 
-  date1: Date;
-  pertenceAlbum: string;
-  artists = [];
-  selectedGenres: string[] = [];
-  genres: any[];
+  option: string;
+  constructor() {
+  }
 
-  constructor(private primengConfig: PrimeNGConfig) {
 
-    this.genres = [
-      { genre: "Ação", code: "action" },
-      { genre: "Aventura", code: "adventure" },
-      { genre: "Fantasia", code: "fantasy" },
-      { genre: "Sci-fi", code: "scifi" },
-      { genre: "Drama", code: "drama" },
-      { genre: "Biografia", code: "biography" },
-      { genre: "Romance", code: "romance" },
-      { genre: "Musical", code: "musical" },
-      { genre: "Comédia", code: "comedy" },
-      { genre: "Terror", code: "horror" },
-      { genre: "Comédia romântica", code: "romcom" }
-    ];
+
+
+  ngOnInit(): void {
+
 
   }
 
-  
-
-  ngOnInit(): void {
-    this.primengConfig.ripple = true;
-    this.artists=[
-      {id: '1', name: 'Robert' },
-      {id: '2', name: 'Mara' },
-      {id: '3', name: 'Nina'}
-    ]
-
+  selectMovie(){
+    this.option = 'movie';
+  }
+  selectBook(){
+    this.option = 'book';
   }
 
 }

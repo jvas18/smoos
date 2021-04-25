@@ -28,5 +28,10 @@ namespace Smoos.Api.Controllers
               UnprocessableEntity()
               : Ok(await _mediator.Send(command));
         }
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            return await Task.FromResult(Ok((_artistRepository.ListAsNoTracking())));
+        }
     }
 }
