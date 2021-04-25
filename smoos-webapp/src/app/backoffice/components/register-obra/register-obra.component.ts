@@ -22,7 +22,7 @@ export class RegisterObraComponent implements OnInit {
 
   date1: Date;
   pertenceAlbum: string;
-
+  artists = [];
   selectedGenres: string[] = [];
   genres: any[];
 
@@ -44,8 +44,16 @@ export class RegisterObraComponent implements OnInit {
 
   }
 
+  
+
   ngOnInit(): void {
     this.primengConfig.ripple = true;
+    this.artists=[
+      {id: '1', name: 'Robert' },
+      {id: '2', name: 'Mara' },
+      {id: '3', name: 'Nina'}
+    ]
+
   }
 
 }

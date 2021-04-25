@@ -3,14 +3,14 @@
         <h1>Cadastro de Artistas</h1>
         <section class="section">
             <div>
-                <form>
+                <form  [formGroup]="form" novalidate>
                     <div>
                         <label class="label" for="nome">Nome:*</label> <br>
-                        <input class="input" id="name" name="name" type="text" required>
+                        <input class="input" id="name" formControlName="name" name="name" type="text" required>
                     </div>
                     <div>
                         <label class="label" for="age">Idade:*</label> <br>
-                        <input style="width: 140px;" class="input" id="age" name="age" type="text" required>
+                        <input style="width: 140px;" class="input"formControlName="age"  id="age" name="age" type="text" required>
                     </div>
                     <div>
                         <label class="label" for="picture">Foto:*</label> <br>
@@ -18,10 +18,10 @@
                     </div>
                     <div>
                         <label class="label" for="description">Descrição:*</label> <br>
-                        <textarea style="width: 880px; height: 5em; vertical-align: text-top; box-sizing: border-box; border: 2px solid #fff; resize: horizontal" class="input" id="description" name="description" type="text" required></textarea>
+                        <textarea formControlName="description" style="width: 880px; height: 5em; vertical-align: text-top; box-sizing: border-box; border: 2px solid #fff; resize: horizontal" class="input" id="description" name="description" type="text" required></textarea>
                     </div>
                     <div>
-                        <button id="button" type="submit">Cadastrar artista</button>
+                        <button id="button" (click)="save()" type="submit">Cadastrar artista</button>
                     </div>
                 </form>
             </div>

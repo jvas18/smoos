@@ -99,7 +99,10 @@
             <form>
                 <div class="campos">
                     <label class="label" for="album-singer">Cantor(a):*</label> <br>
-                    <input style="width: 268px;" class="singer-input" id="album-singer" name="album-singer" type="text" required>
+                    <select style="width: 268px;" class="singer-input" id="album-singer" name="album-singer">
+                        <option *ngFor="artist in artists" value="id">{{artist.name}}</option>
+                    </select>
+                    <!-- <input style="width: 268px;" class="singer-input" id="album-singer" name="album-singer" type="text" required> -->
                 </div>
                 <div class="campos" style="padding-left: 55px;">
                     <label class="label" for="duration">Duração:*</label> <br>
@@ -133,7 +136,9 @@
             <form>
                 <div class="campos">
                     <label class="label" for="author">Autor(a):*</label> <br>
-                    <input style="width: 268px;" class="author-input" id="author" name="album-singer" type="text" required>
+                    <select style="width: 268px;"style="width: 268px;" class="author-input" id="author">
+                        <option *ngFor="artist in artists" value="id">{{artist.name}}</option>
+                    </select>
                 </div>
                 <div class="campos" style="padding-left: 55px;">
                     <label class="label" for="page-count">Quantidade de páginas:*</label> <br>
@@ -170,7 +175,7 @@
                 </div>
             </form>
         </section>
-        <h1 style="padding-left: 270px; padding-top: 30px;">Campos música</h1>
+        <!-- <h1 style="padding-left: 270px; padding-top: 30px;">Campos música</h1>
         <section class="campos-musica">
             <form>
                 <div class="campos">
@@ -200,7 +205,7 @@
                     <input style="width: 268px;" class="input" id="photo" name="photo" type="file" required>
                 </div>
                 <div class="campos">
-                    <label class="label" for="pertenceAlbum">Pertence à algum álbum:*</label> <br>
+                    <label class="label" for="pertenceAlbum">Pertence à algum álbum:*</label> <br> -->
                     <!-- <div class="p-field-radiobutton">
                         <p-radioButton name="pertenceAlbum" value="sim" [(ngModel)]="pertenceAlbum" inputId="sim"></p-radioButton>
                         <label class="label" for="sim">Sim</label>
@@ -209,10 +214,10 @@
                         <p-radioButton name="pertence-album" value="não" [(ngModel)]="pertenceAlbum" inputId="não"></p-radioButton>
                         <label class="label" for="não">Não</label>
                     </div> -->
-                    <input id="yes" name="yes" type="radio"> <span> Sim </span>
+                    <!-- <input id="yes" name="yes" type="radio"> <span> Sim </span>
                     <input id="no" name="no" type="radio"> <span> Não </span>
-                </div>
-                <div class="campos" style="padding-left: 75px;">
+                </div> -->
+                <!-- <div class="campos" style="padding-left: 75px;">
                     <label class="label" for="album">Album(a):*</label> <br>
                     <input style="width: 268px;" class="album-input" id="album" name="album" type="text" required>
                 </div>
@@ -220,4 +225,4 @@
                     <button id="button" type="submit">Cadastrar Obra</button>
                 </div>
             </form>
-        </section>
+        </section> -->
