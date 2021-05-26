@@ -1,0 +1,64 @@
+.slider {
+    display: block;
+    height: 350px;
+    width: 1280px;
+    margin: auto;
+    margin-top: 20px;
+    margin-left: 0px;
+    position: relative;
+}
+
+.slider li {
+    list-style: none;
+    position: absolute;
+}
+
+.slider img {
+    margin: auto;
+    height: 350px;
+    width: 1280px;
+    vertical-align: top;
+    border-radius: 8px;
+}
+.slider input {
+    display: none;
+}
+.slider label {
+    background-color: #000;
+    bottom: 10px;
+    cursor: pointer;
+    display: block;
+    height: 10px;
+    position: absolute;
+    width: 10px;
+    z-index: 10;
+    border-radius: 5px;
+}
+
+.slider li:nth-child(1) label {
+    left: 610px;
+}
+
+.slider li:nth-child(2) label {
+    left: 630px;
+}
+
+.slider li:nth-child(3) label {
+    left: 650px;
+}
+.slider img {
+    opacity: 0;
+    visibility: hidden;
+}
+
+.slider li input:checked ~ img {
+    opacity: 1;
+    visibility: visible;
+    z-index: 10;
+}
+h1{
+    margin-left: 80px;
+    margin-top: 30px;
+    font-size: x-large;
+    color: #fff;
+}

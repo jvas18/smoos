@@ -1,0 +1,207 @@
+<app-header-user></app-header-user>
+<section class="container">
+    <div class="album-box">
+        <div class="poster-box">
+            <div class="poster-rating">
+                <img style="width: 200px; border-radius: 5px;" src="../../../../assets/imgs/sour-cover.png">
+                <img style="padding-top: 20px; padding-left: 23px;" src="../../../../assets/icons/rating-stars.svg">
+                <h2 style="padding-top: 5px; padding-left: 75px;">9.6</h2>
+            </div>
+        </div>
+        <div class="album">
+            <div class="album-title">
+                <h1>SOUR</h1>
+                <a (click)="favoriteWork()"><img style="padding-top: 5px; cursor: pointer;" src="../../../../assets/icons/normal-heart.svg"></a>
+                <section *ngIf="option == 'favorited-heart'">
+                    <img style="padding-top: 5px; cursor: pointer;" src="../../../../assets/icons/liked-heart-purple-green.svg">
+                </section>
+            </div>
+            <div class="album-info">
+                <div>
+                    <span>Ano de Lançamento:</span> <br>
+                    <span style="font-weight: bold;">2021</span>
+                </div>
+                <div>
+                    <span>Duração:</span> <br>
+                    <span style="font-weight: bold;">34min 46s</span>
+                </div>
+                <div>
+                    <span>Gênero:</span> <br>
+                    <span style="font-weight: bold;">Pop</span>
+                </div>
+            </div>
+            <h4>Cantor(a):</h4>
+            <div class="artist">
+                <div class="artist-info">
+                    <div class="artist-pic"></div>
+                    <span style="font-weight: bold; padding-top: 5px; text-align: center;">Olivia Rodrigo</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <h4 style="padding-top: 30px">Avaliações:</h4>
+    <div class="avaliation-and-form">
+        <div class="avaliations">
+            <div class="comment-box">
+                <div class="user-info">
+                    <div class="user-icon"></div>
+                    <span style="padding-top: 5px; text-align: center;">Júlia Dias</span>
+                </div>
+                <div class="comment-division"></div>
+                <div class="comment-info">
+                    <div class="comment-title">
+                        <h5>Filme Incrível!!</h5>
+                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
+                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div>
+                    <!-- <div class="comment-rating">
+                        <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div> -->
+                    <div class="comment">
+                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-box">
+                <div class="user-info">
+                    <div class="user-icon"></div>
+                    <span style="padding-top: 5px; text-align: center;">Júlia Dias</span>
+                </div>
+                <div class="comment-division"></div>
+                <div class="comment-info">
+                    <div class="comment-title">
+                        <h5>Filme Incrível!!</h5>
+                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
+                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div>
+                    <!-- <div class="comment-rating">
+                        <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div> -->
+                    <div class="comment">
+                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-box">
+                <div class="user-info">
+                    <div class="user-icon"></div>
+                    <span style="padding-top: 5px; text-align: center;">Júlia Dias</span>
+                </div>
+                <div class="comment-division"></div>
+                <div class="comment-info">
+                    <div class="comment-title">
+                        <h5>Filme Incrível!!</h5>
+                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
+                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div>
+                    <!-- <div class="comment-rating">
+                        <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div> -->
+                    <div class="comment">
+                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-box">
+                <div class="user-info">
+                    <div class="user-icon"></div>
+                    <span style="padding-top: 5px; text-align: center;">Júlia Dias</span>
+                </div>
+                <div class="comment-division"></div>
+                <div class="comment-info">
+                    <div class="comment-title">
+                        <h5>Filme Incrível!!</h5>
+                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
+                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div>
+                    <!-- <div class="comment-rating">
+                        <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div> -->
+                    <div class="comment">
+                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-box">
+                <div class="user-info">
+                    <div class="user-icon"></div>
+                    <span style="padding-top: 5px; text-align: center;">Júlia Santiago</span>
+                </div>
+                <div class="comment-division"></div>
+                <div class="comment-info">
+                    <div class="comment-title">
+                        <h5>Filme Incrível!!</h5>
+                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
+                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div>
+                    <!-- <div class="comment-rating">
+                        <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div> -->
+                    <div class="comment">
+                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-box">
+                <div class="user-info">
+                    <div class="user-icon"></div>
+                    <span style="padding-top: 5px; text-align: center;">Júlia Santiago</span>
+                </div>
+                <div class="comment-division"></div>
+                <div class="comment-info">
+                    <div class="comment-title">
+                        <h5>Filme Incrível!!</h5>
+                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
+                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div>
+                    <!-- <div class="comment-rating">
+                        <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div> -->
+                    <div class="comment">
+                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
+                    </div>
+                </div>
+            </div>
+            <div class="comment-box">
+                <div class="user-info">
+                    <div class="user-icon"></div>
+                    <span style="padding-top: 5px; text-align: center;">Júlia Santiago</span>
+                </div>
+                <div class="comment-division"></div>
+                <div class="comment-info">
+                    <div class="comment-title">
+                        <h5>Filme Incrível!!</h5>
+                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
+                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div>
+                    <!-- <div class="comment-rating">
+                        <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                    </div> -->
+                    <div class="comment">
+                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="form-box">
+            <h4 style="color: #161618; padding-left: 0px; padding-top: 0px;">Deixe sua avaliação:</h4>
+            <form [formGroup]="form" novalidate>
+                <div class="campos">
+                    <label class="label" for="title">Título da avaliação:*</label>
+                    <input style="width: 320px;" formControlName="title" class="input" id="title" name="title" type="text" required>
+                </div>
+                <div class="campos">
+                    <label class="label" for="comment">Comentário:*</label>
+                    <textarea style="width: 320px; height: 10em; vertical-align: text-top; box-sizing: border-box; border: 2px solid #fff; resize: vertical" formControlName="comment" class="input" id="comment" name="comment" type="comment" required></textarea>
+                </div>
+                <div class="campos">
+                    <label class="label" for="comment">Pontuação:*</label>
+                    <p-rating [(ngModel)]="val" formControlName="rating" required [cancel]="false"></p-rating>
+                </div>
+                <div style="padding-left: 250px; ">
+                    <button id="button" type="submit">Enviar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</section>

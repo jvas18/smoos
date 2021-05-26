@@ -1,0 +1,42 @@
+<form [formGroup]="form" novalidate>
+    <div class="campos">
+        <label class="label" for="name">Nome:*</label> <br>
+        <input style="width: 268px;"  formControlName="name" class="input" id="name" name="name" type="text" required>
+    </div>
+    <div class="campos">
+        <label class="label" for="release-date">Ano de Lançamento:*</label> <br>
+        <input style="width: 230px;" class="input" inputId="release-date" formControlName="releaseYear"/>
+    </div>
+    <div class="campos">
+        <label class="label" for="author">Cantor(a):*</label> <br>
+        <p-multiSelect [options]="artists" formControlName="singer" optionLabel="name" optionValue="id" display="chip" appendTo="body" [style]="{'width':'268px', 'height': '40px'}"></p-multiSelect>
+    </div>
+    <div class="campos" >
+        <label class="label" for="duration">Duração:*</label> <br>
+        <input style="width: 230px;" formControlName="duration" class="duration-input" id="duration" name="duration" type="text" required>
+    </div>
+    <div class="campos">
+        <p>Gênero:*</p>
+        <p-dropdown formControlName="genres" required [placeholder]="'Selecione o gênero'"
+        [options]="genres" optionLabel="description" optionValue="value"
+        [style]="{'width':'268px', 'height': '60px'}"></p-dropdown>
+    </div>
+    <div class="campos">
+        <label class="label" for="photo">Foto:*</label> <br>
+        <input style="width: 230px;" class="input" id="photo" name="photo" type="file" required>
+    </div>
+    <div class="campos">
+        <label class="label" for="pertenceAlbum">Pertence à algum álbum:*</label> <br>
+        <p-radioButton name="yes" value="yes" [(ngModel)]="pertenceAlbum" formControlName="sePertenceAlbum" required></p-radioButton>
+        <label for="yes">Sim</label>
+        <p-radioButton name="no" value="no" [(ngModel)]="pertenceAlbum" formControlName="sePertenceAlbum" required></p-radioButton>
+        <label for="no">Não</label>
+    </div>
+    <div class="campos">
+        <label class="label" for="cast">Álbum:*</label> <br>
+        <p-multiSelect [options]="albums" formControlName="album" optionLabel="name" optionValue="id" display="chip" appendTo="body" [style]="{'width':'268px', 'height': '40px'}"></p-multiSelect>
+    </div>
+    <div style="padding-left: 400px;">
+        <button id="button" type="submit">Cadastrar Música</button>
+    </div>
+</form>

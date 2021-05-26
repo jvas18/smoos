@@ -130,7 +130,7 @@ p{
 }
 .input:focus{
     box-shadow: none;
-    outline: 0;
+    outline-color: #BF62EA;
 }
 span{
     color: #fff;
@@ -182,7 +182,7 @@ form div{
 }
 .duration-input:focus{
     box-shadow: none;
-    outline: 0;
+    outline-color: #BF62EA;
 }
 .cast-input{
     top: 5px;
@@ -202,13 +202,13 @@ form div{
 }
 .cast-input:focus{
     box-shadow: none;
-    outline: 0;
+    outline-color: #BF62EA;
 }
 #button{
     border-radius: 10px;
     width: 165px;
     height: 40px;
-    background-color: #C4C4C4;
+    background-color: #BF62EA;
     border-width: 0px;
     font-family: Raleway;
     font-weight: bold;
@@ -243,7 +243,7 @@ form div{
 }
 .singer-input:focus{
     box-shadow: none;
-    outline: 0;
+    outline-color: #BF62EA;
 }
 .campos-livro{
     margin-top: 40px;
@@ -273,7 +273,7 @@ form div{
 }
 .author-input:focus{
     box-shadow: none;
-    outline: 0;
+    outline-color: #BF62EA;
 }
 .page-count-input{
     top: 5px;
@@ -289,11 +289,11 @@ form div{
     color: #fff;
     background-image:url(../../../../../assets/icons/book-pages.svg); 
     background-repeat: no-repeat; 
-    background-position: 5px;
+    background-position: 190px;
 }
 .page-count-input:focus{
     box-shadow: none;
-    outline: 0;
+    outline-color: #BF62EA;
 }
 .campos-musica{
     margin-top: 40px;
@@ -323,5 +323,5 @@ form div{
 }
 .album-input:focus{
     box-shadow: none;
-    outline: 0;
+    outline-color: #BF62EA;
 }

@@ -1,26 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Api\\Smoos.Api.csproj": {}
+    "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Api\\Smoos.Api.csproj": {}
   },
   "projects": {
-    "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Api\\Smoos.Api.csproj": {
+    "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Api\\Smoos.Api.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Api\\Smoos.Api.csproj",
+        "projectUniqueName": "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Api\\Smoos.Api.csproj",
         "projectName": "Smoos.Api",
-        "projectPath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Api\\Smoos.Api.csproj",
-        "packagesPath": "C:\\Users\\jvict\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Api\\obj\\",
+        "projectPath": "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Api\\Smoos.Api.csproj",
+        "packagesPath": "C:\\Users\\jujus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Api\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\jvict\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\jujus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net5.0"
@@ -30,14 +28,13 @@
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net5.0": {
-            "targetAlias": "net5.0",
+          "net50": {
             "projectReferences": {
-              "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj": {
-                "projectPath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj"
+              "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj": {
+                "projectPath": "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj"
               },
-              "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj": {
-                "projectPath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj"
+              "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj": {
+                "projectPath": "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj"
               }
             }
           }
@@ -49,8 +46,7 @@
         }
       },
       "frameworks": {
-        "net5.0": {
-          "targetAlias": "net5.0",
+        "net50": {
           "dependencies": {
             "FluentValidation.AspNetCore": {
               "target": "Package",
@@ -115,45 +111,30 @@
               "version": "[6.1.1, )"
             }
           },
-          "imports": [
-            "net461",
-            "net462",
-            "net47",
-            "net471",
-            "net472",
-            "net48"
-          ],
-          "assetTargetFallback": true,
-          "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.405\\RuntimeIdentifierGraph.json"
+        }
+      },
+      "runtimes": {
+        "win7-x86": {
+          "#import": []
         }
       }
     },
-    "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj": {
+    "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj",
+        "projectUniqueName": "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj",
         "projectName": "Smoos.Data",
-        "projectPath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj",
-        "packagesPath": "C:\\Users\\jvict\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Data\\obj\\",
+        "projectPath": "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Data\\Smoos.Data.csproj",
+        "packagesPath": "C:\\Users\\jujus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Data\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\jvict\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\jujus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -164,10 +145,9 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj": {
-                "projectPath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj"
+              "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj": {
+                "projectPath": "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj"
               }
             }
           }
@@ -180,7 +160,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "Dapper": {
               "target": "Package",
@@ -235,42 +214,30 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.405\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj": {
+    "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj",
         "projectName": "Smoos.Domain",
-        "projectPath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj",
-        "packagesPath": "C:\\Users\\jvict\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\jvict\\OneDrive\\Documentos\\smoos\\Smoos\\src\\Smoos.Domain\\obj\\",
+        "projectPath": "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Domain\\Smoos.Domain.csproj",
+        "packagesPath": "C:\\Users\\jujus\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\jujus\\Desktop\\smoos-updated\\smoos\\Smoos\\src\\Smoos.Domain\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
           "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
         ],
         "configFilePaths": [
-          "C:\\Users\\jvict\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Users\\jujus\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -281,7 +248,6 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "targetAlias": "netcoreapp3.1",
             "projectReferences": {}
           }
         },
@@ -293,7 +259,6 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "targetAlias": "netcoreapp3.1",
           "dependencies": {
             "FluentValidation": {
               "target": "Package",
@@ -330,22 +295,12 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "downloadDependencies": [
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            },
-            {
-              "name": "Microsoft.WindowsDesktop.App.Ref",
-              "version": "[3.1.0, 3.1.0]"
-            }
-          ],
           "frameworkReferences": {
             "Microsoft.NETCore.App": {
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.405\\RuntimeIdentifierGraph.json"
         }
       }
     }

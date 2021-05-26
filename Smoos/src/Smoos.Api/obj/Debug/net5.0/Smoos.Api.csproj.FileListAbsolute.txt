@@ -103,3 +103,4 @@ C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\re
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.pdb
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.genruntimeconfig.cache
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\NetDevPack.Security.JwtExtensions.dll
+C:\Users\jujus\Desktop\smoos-updated\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.pdb

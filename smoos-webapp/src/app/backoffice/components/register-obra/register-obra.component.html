@@ -8,22 +8,22 @@
                     <p>Filme</p>
                 </div>
             </div>
-            <!-- <div class="box">
-                <a href="#" class="box-content">
+            <div class="box">
+                <div style="padding-left: 3px" class="box-content" (click)="selectAlbum()">
                     <img style="padding-left: 3px" src="assets\icons\album-icon.svg">
                     <br>
                     <p>Álbum</p>
-                </a>
-            </div> -->
-            <!-- <div class="box">
-                <a href="#" class="box-content">
+                </div>
+            </div>
+            <div class="box">
+                <div class="box-content" (click)="selectSong()">
                     <img style="padding-left: 3px" src="assets\icons\music-icon.svg">
                     <br>
                     <p>Música</p>
-                </a>
-            </div> -->
+                </div>
+            </div>
             <div class="box">
-                <div style="padding-left: 3px"  (click)="selectBook()" class="box-content">
+                <div style="padding-left: 3px" (click)="selectBook()" class="box-content">
                     <img src="assets\icons\book-icon.svg">
                     <br>
                     <p style="padding-left: 4px">Livro</p>
@@ -33,94 +33,12 @@
         <section  class="campos-filme" *ngIf="option == 'movie'">
             <app-register-movie ></app-register-movie>
         </section>
-               
-        <!-- <h1 style="padding-left: 270px; padding-top: 30px;">Campos album</h1>
-        <section class="campos-album">
-            <form>
-                <div class="campos">
-                    <label class="label" for="album-singer">Cantor(a):*</label> <br>
-                    <select style="width: 268px;" class="singer-input" id="album-singer" name="album-singer">
-                        <option *ngFor="artist in artists" value="id">{{artist.name}}</option>
-                    </select>
-                </div>
-                <div class="campos" style="padding-left: 55px;">
-                    <label class="label" for="duration">Duração:*</label> <br>
-                    <input style="width: 230px;" class="duration-input" id="duration" name="duration" type="text" required>
-                </div>
-                <div class="campos">
-                    <label class="label" for="genre">Gênero:*</label><br>
-                    <input id="action" name="action" type="checkbox"> <span> Ação </span>
-                    <input id="adventure" name="adventure" type="checkbox"> <span> Aventura </span>
-                    <input id="fantasy" name="fantasy" type="checkbox"> <span> Fantasia </span><br>
-                    <input id="scifi" name="scifi" type="checkbox"> <span> Sci-Fi </span>
-                    <input id="drama" name="drama" type="checkbox"> <span> Drama </span>
-                    <input id="biography" name="biography" type="checkbox"> <span> Biografia </span><br>
-                    <input id="romance" name="romance" type="checkbox"> <span> Romance </span>
-                    <input id="musical" name="musical" type="checkbox"> <span> Musical </span>
-                    <input id="comedy" name="comedy" type="checkbox"> <span> Comédia </span><br>
-                    <input id="horror" name="horror" type="checkbox"> <span> Terror </span>
-                    <input id="romcom" name="romcom" type="checkbox"> <span> Comédia Romântica </span>
-                </div>
-                <div class="campos" style="padding-left: 50px">
-                    <label class="label" for="photo">Foto:*</label> <br>
-                    <input style="width: 268px;" class="input" id="photo" name="photo" type="file" required>
-                </div>
-                <div style="padding-left: 430px;">
-                    <button id="button" type="submit">Cadastrar Obra</button>
-                </div>
-            </form>
-        </section> -->
+        <section  class="campos-album" *ngIf="option == 'album'">
+            <app-register-album></app-register-album>
+        </section>
+        <section  class="campos-musica" *ngIf="option == 'song'">
+            <app-register-song></app-register-song>
+        </section>
         <section class="campos-livro" *ngIf="option == 'book'">
             <app-register-book></app-register-book>
         </section>
-        <!-- <h1 style="padding-left: 270px; padding-top: 30px;">Campos música</h1>
-        <section class="campos-musica">
-            <form>
-                <div class="campos">
-                    <label class="label" for="song-singer">Cantor(a):*</label> <br>
-                    <input style="width: 268px;" class="singer-input" id="song-singer" name="song-singer" type="text" required>
-                </div>
-                <div class="campos" style="padding-left: 55px;">
-                    <label class="label" for="duration">Duração:*</label> <br>
-                    <input style="width: 230px;" class="duration-input" id="duration" name="duration" type="text" required>
-                </div>
-                <div class="campos">
-                    <label class="label" for="genre">Gênero:*</label><br>
-                    <input id="action" name="action" type="checkbox"> <span> Ação </span>
-                    <input id="adventure" name="adventure" type="checkbox"> <span> Aventura </span>
-                    <input id="fantasy" name="fantasy" type="checkbox"> <span> Fantasia </span><br>
-                    <input id="scifi" name="scifi" type="checkbox"> <span> Sci-Fi </span>
-                    <input id="drama" name="drama" type="checkbox"> <span> Drama </span>
-                    <input id="biography" name="biography" type="checkbox"> <span> Biografia </span><br>
-                    <input id="romance" name="romance" type="checkbox"> <span> Romance </span>
-                    <input id="musical" name="musical" type="checkbox"> <span> Musical </span>
-                    <input id="comedy" name="comedy" type="checkbox"> <span> Comédia </span><br>
-                    <input id="horror" name="horror" type="checkbox"> <span> Terror </span>
-                    <input id="romcom" name="romcom" type="checkbox"> <span> Comédia Romântica </span>
-                </div>
-                <div class="campos" style="padding-left: 50px">
-                    <label class="label" for="photo">Foto:*</label> <br>
-                    <input style="width: 268px;" class="input" id="photo" name="photo" type="file" required>
-                </div>
-                <div class="campos">
-                    <label class="label" for="pertenceAlbum">Pertence à algum álbum:*</label> <br> -->
-                    <!-- <div class="p-field-radiobutton">
-                        <p-radioButton name="pertenceAlbum" value="sim" [(ngModel)]="pertenceAlbum" inputId="sim"></p-radioButton>
-                        <label class="label" for="sim">Sim</label>
-                    </div>
-                    <div class="p-field-radiobutton">
-                        <p-radioButton name="pertence-album" value="não" [(ngModel)]="pertenceAlbum" inputId="não"></p-radioButton>
-                        <label class="label" for="não">Não</label>
-                    </div> -->
-                    <!-- <input id="yes" name="yes" type="radio"> <span> Sim </span>
-                    <input id="no" name="no" type="radio"> <span> Não </span>
-                </div> -->
-                <!-- <div class="campos" style="padding-left: 75px;">
-                    <label class="label" for="album">Album(a):*</label> <br>
-                    <input style="width: 268px;" class="album-input" id="album" name="album" type="text" required>
-                </div>
-                <div style="padding-left: 430px;">
-                    <button id="button" type="submit">Cadastrar Obra</button>
-                </div>
-            </form>
-        </section> -->

@@ -1,0 +1,74 @@
+h1{
+    margin-left: 450px;
+    font-size: x-large;
+    color: #fff;
+    font-family: Raleway;
+    font-weight: bold;
+}
+h2{
+    margin-left: 380px;
+    font-size: medium;
+    color: #C4C4C4;
+    font-family: Raleway;
+    font-weight: bold;
+}
+p{
+    font-family: Raleway;
+    font-weight: medium;
+    font-size: 18px;
+    color: #fff;
+    font-family: Raleway;
+}
+form{
+    display: flex;
+    flex-wrap: wrap;
+}
+.box{
+    margin-top: 20px;
+    margin-left: 370px;
+    max-width: 350px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    height: fit-content; 
+}
+.campos{
+    padding-top: 5px;
+    align-items: center;
+    padding-inline: 50px;
+}
+.label {
+    font-family: Raleway;
+    font-weight: medium;
+    font-size: 18px;
+    color: #fff;
+}
+.input {
+    top: 5px;
+    border-radius: 10px;
+    width: 320px;
+    height: 40px;
+    background-color: #161618;
+    border-width: 1px solid;
+    border-color: #fff;
+    font-family: Raleway;
+    font-weight: medium;
+    font-size: 16px;
+    color: #fff;
+}
+.input:focus{
+    box-shadow: none;
+    outline-color: #BF62EA;
+}
+#button{
+    border-radius: 10px;
+    width: 165px;
+    height: 40px;
+    background-color: #BF62EA;
+    border-width: 0px;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+
+}

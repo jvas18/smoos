@@ -20,10 +20,10 @@ export class RegisterBookComponent implements OnInit {
   form = new FormGroup({
     name: new FormControl('', [Validators.required]),
     releaseYear: new FormControl('', [Validators.required]),
+    author: new FormControl('', Validators.required),
+    pages: new FormControl('', Validators.required),
     summary: new FormControl('', Validators.required),
     genres: new FormControl('', Validators.required),
-    pages: new FormControl('', Validators.required),
-    artistId: new FormControl('', Validators.required),
     publisher: new FormControl('', Validators.required)
   });
 
