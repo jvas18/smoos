@@ -7,3 +7,12 @@ C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Domain\obj\Debug\netcor
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Domain\obj\Debug\netcoreapp3.1\Smoos.Domain.csproj.CoreCompileInputs.cache
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Domain\obj\Debug\netcoreapp3.1\Smoos.Domain.dll
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Domain\obj\Debug\netcoreapp3.1\Smoos.Domain.pdb
+C:\Users\jujus\Desktop\smoos-updated\smoos\Smoos\src\Smoos.Domain\bin\Debug\netcoreapp3.1\Smoos.Domain.deps.json
+C:\Users\jujus\Desktop\smoos-updated\smoos\Smoos\src\Smoos.Domain\bin\Debug\netcoreapp3.1\Smoos.Domain.dll
+C:\Users\jujus\Desktop\smoos-updated\smoos\Smoos\src\Smoos.Domain\bin\Debug\netcoreapp3.1\Smoos.Domain.pdb
+C:\Users\jujus\Desktop\smoos-updated\smoos\Smoos\src\Smoos.Domain\obj\Debug\netcoreapp3.1\Smoos.Domain.csprojAssemblyReference.cache
+C:\Users\jujus\Desktop\smoos-updated\smoos\Smoos\src\Smoos.Domain\obj\Debug\netcoreapp3.1\Smoos.Domain.AssemblyInfoInputs.cache
+C:\Users\jujus\Desktop\smoos-updated\smoos\Smoos\src\Smoos.Domain\obj\Debug\netcoreapp3.1\Smoos.Domain.AssemblyInfo.cs
+C:\Users\jujus\Desktop\smoos-updated\smoos\Smoos\src\Smoos.Domain\obj\Debug\netcoreapp3.1\Smoos.Domain.csproj.CoreCompileInputs.cache
+C:\Users\jujus\Desktop\smoos-updated\smoos\Smoos\src\Smoos.Domain\obj\Debug\netcoreapp3.1\Smoos.Domain.dll
+C:\Users\jujus\Desktop\smoos-updated\smoos\Smoos\src\Smoos.Domain\obj\Debug\netcoreapp3.1\Smoos.Domain.pdb

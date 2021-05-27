@@ -1,0 +1,209 @@
+.container{
+    max-width: 1190px;
+}
+.poster-box{
+    background-color: #DBF6F6;
+    border-radius: 10px;
+    width: 265px;
+    height: 440px;
+}
+.movie-box{
+    display: flex;
+    max-width: 1190px;
+    /* border: 1px solid #fff; */
+}
+.movie{
+    display: block;
+    max-width: 1100px;
+    /*border: 1px solid red; */
+}
+.poster-rating{
+    position: relative;
+    display: block;
+    padding: 30px;
+    width: 100px;
+    height: 300px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+h2{
+    font-family: Raleway;
+    color: #161618;
+    font-weight:bolder;
+}
+h1{
+    color: #fff;
+    font-family: Raleway;
+    font-weight: bold;
+}
+h5{
+    color: #fff;
+    font-family: Raleway;
+    font-weight: bold;
+}
+h4{
+    color: #fff;
+    font-family: Raleway;
+    font-weight: bold;
+    padding-left: 30px;
+    padding-top: 18px;
+}
+span{
+    font-family: Raleway;
+    color: #fff;
+}
+.movie-title{
+    padding-left: 30px;
+    padding-top: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 880px;
+}
+.movie-info-1{
+    /* border: 1px solid blue; */
+    padding-left: 30px;
+    padding-top: 20px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 400px;
+}
+.movie-info-2{
+    /* border: 1px solid blue; */
+    padding-left: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 440px;
+}
+.cast{
+    /* border: 1px solid green; */
+    padding-left: 30px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 880px;
+}
+.artist-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    flex-wrap: wrap;
+    /* border: 1px solid yellow; */
+}
+.artist-pic{
+    background-color: #C4C4C4;
+    height: 90px;
+    width: 90px;
+    border-radius: 50px;
+}
+.summary{
+    /* border: 1px solid pink; */
+    max-width: 1190px;
+    height: fit-content;
+
+}
+.avaliation-and-form{
+    display: flex;
+    max-width: 1110px;
+    /* border: 1px solid orange; */
+    justify-content: space-between;
+}
+.avaliations{
+    /* border: 1px solid pink; */
+    max-width: 750px;
+    height: fit-content;
+    padding-left: 30px;
+    padding-right: 30px;
+    display: flex;
+    flex-wrap: wrap;
+    padding-bottom: 20px;
+}
+.user-icon{
+    background-color: #C4C4C4;
+    height: 40px;
+    width: 40px;
+    border-radius: 50px;
+}
+.user-info{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100px;
+    height: fit-content;
+    flex-wrap: wrap;
+    /* border: 1px solid yellow; */
+}
+.comment-box{
+    /* border: 1px solid green; */
+    max-width: 690px;
+    height: fit-content;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+.comment-division{
+    background-color: #C4C4C4;
+    height: 95px;
+    width: 2px;
+}
+.comment-info{
+    display: block;
+    padding-left: 10px;
+    max-width: 590px;
+    /* border: 1px solid blue; */
+}
+.comment-title{
+    display: flex;
+}
+.form-box{
+    background-color: #DBF6F6;
+    border-radius: 10px;
+    width: 360px;
+    height: 490px;
+    padding: 20px;
+}
+.campos{
+    padding-top: 10px;
+    align-items: center;
+}
+.label{
+    font-family: Raleway;
+    font-weight: medium;
+    font-size: 18px;
+    color: #161618;
+}
+.input {
+    top: 5px;
+    border-radius: 10px;
+    width: 320px;
+    height: 40px;
+    background-color: #161618;
+    border-width: 1px solid;
+    border-color: #DBF6F6;
+    font-family: Raleway;
+    font-weight: medium;
+    font-size: 16px;
+    color: #fff;
+}
+.input:focus{
+    box-shadow: none;
+    outline-color: #BF62EA;
+}
+#button{
+    border-radius: 10px;
+    width: fit-content;
+    height: fit-content;
+    padding: 10px;
+    background-color: #BF62EA;
+    border-width: 0px;
+    font-family: Raleway;
+    font-weight: bold;
+    font-size: 16px;
+    color: #fff;
+}

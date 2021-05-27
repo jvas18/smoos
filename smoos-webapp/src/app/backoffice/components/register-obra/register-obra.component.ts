@@ -38,5 +38,11 @@ export class RegisterObraComponent implements OnInit {
   selectBook(){
     this.option = 'book';
   }
+  selectAlbum(){
+    this.option = 'album';
+  }
+  selectSong(){
+    this.option = 'song';
+  }
 
 }

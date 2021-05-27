@@ -1,41 +1,39 @@
-<form  [formGroup]="form" novalidate >
+<form  [formGroup]="form" novalidate>
     <div class="campos">
         <label class="label" for="name">Nome:*</label> <br>
         <input style="width: 268px;"  formControlName="name" class="input" id="name" name="name" type="text" required>
     </div>
     <div class="campos">
-        <label class="label" for="release-date">Data de Lançamento:*</label>
+        <label class="label" for="release-date">Ano de Lançamento:*</label> <br>
         <input style="width: 230px;" class="input" inputId="release-date" formControlName="releaseYear"/>
     </div>
     <div class="campos">
         <label class="label" for="author">Autor(a):*</label> <br>
-        <p-dropdown formControlName="artistId" required [placeholder]="'Selecione o autor'"
-        [options]="artists" optionLabel="name" optionValue="id"
-        [style]="{'width':'268px'}"></p-dropdown>
+        <p-multiSelect [options]="artists" formControlName="author" optionLabel="name" optionValue="id" display="chip" appendTo="body" [style]="{'width':'268px', 'height': '40px'}"></p-multiSelect>
     </div>
-    <div class="campos" style="padding-left: 55px;">
+    <div class="campos">
         <label class="label" for="page-count">Quantidade de páginas:*</label> <br>
         <input style="width: 230px;" class="page-count-input" id="page-count" name="page-count" formControlName="pages"  type="text" required>
     </div>
     <div class="campos">
         <label class="label" for="description">Sinopse:*</label> <br>
-        <textarea style="width: 575px; height: 5em; vertical-align: text-top; box-sizing: border-box; border: 2px solid #fff; resize: vertical" class="input" formControlName="summary"  id="description" name="description" type="text" required></textarea>
+        <textarea style="width: 540px; height: 5em; vertical-align: text-top; box-sizing: border-box; border: 2px solid #fff; resize: vertical" class="input" formControlName="summary"  id="description" name="description" type="text" required></textarea>
     </div>
     <div class="campos">
         <label class="label" for="genre">Gênero:*</label><br>
         <p-dropdown formControlName="genres" required [placeholder]="'Selecione o gênero'"
         [options]="genres" optionLabel="description" optionValue="value"
-        [style]="{'width':'268px'}"></p-dropdown>
+        [style]="{'width':'268px','height':'60px'}"></p-dropdown>
     </div>
-    <div class="campos" style="padding-left: 45px;">
+    <div class="campos">
         <label class="label" for="publisher">Editora:*</label> <br>
-        <input style="width: 268px;" class="input" id="publisher" name="publisher" formControlName="publisher" type="text" required>
+        <input style="width: 230px;" class="input" id="publisher" name="publisher" formControlName="publisher" type="text" required>
     </div>
     <div class="campos">
         <label class="label" for="photo">Foto:*</label> <br>
         <input style="width: 268px;" class="input" id="photo" name="photo" type="file" required>
     </div>
-    <div style="padding-left: 123px; padding-top: 50px;">
+    <div style="padding-left: 85px; padding-top: 50px;">
         <button id="button"(click)="save()" type="submit">Cadastrar Livro</button>
     </div>
 </form>

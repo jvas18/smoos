@@ -25,16 +25,19 @@ a{
     border-radius: 10px;
     width: 250px;
     height: 35px;
-    background-color: #C4C4C4;
+    background-color: #DBFEFE;
     border-width: 0px;
-    box-shadow: 0 0 5px #C4C4C4;
+    box-shadow: 0 0 5px #DBFEFE;
     font-family: Raleway;
     font-size: 18px;
     font-weight: normal;
 }
+.search::placeholder{
+    color: #161618;
+}
 .search:focus{
     box-shadow: none;
-    outline: 0;
+    outline-color: #00FFFF;
 }
 .header{
     display: flex;
@@ -53,4 +56,7 @@ a{
 .menu li a{
     display: block;
     padding: 10px;
+}
+a:hover{
+    color: #BF62EA;
 }

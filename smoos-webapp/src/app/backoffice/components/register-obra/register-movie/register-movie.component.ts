@@ -22,9 +22,9 @@ export class RegisterMovieComponent implements OnInit {
   form = new FormGroup({
     name: new FormControl('', [Validators.required]),
     releaseYear: new FormControl('', [Validators.required]),
-    summary: new FormControl('', Validators.required),
     genres: new FormControl('', Validators.required),
     duration: new FormControl('', Validators.required),
+    summary: new FormControl('', Validators.required),
     actors: new FormControl('', Validators.required),
     country: new FormControl('', Validators.required)
   });

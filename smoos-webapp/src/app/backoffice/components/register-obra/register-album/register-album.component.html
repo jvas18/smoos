@@ -1,0 +1,32 @@
+    <form [formGroup]="form" novalidate>
+        <div class="campos">
+            <label class="label" for="name">Nome:*</label> <br>
+            <input style="width: 268px;"  formControlName="name" class="input" id="name" name="name" type="text" required>
+        </div>
+        <div class="campos">
+            <label class="label" for="release-date">Ano de Lançamento:*</label> <br>
+            <input style="width: 230px;" class="input" inputId="release-date" formControlName="releaseYear"/>
+        </div>
+        <div class="campos">
+            <label class="label" for="cast">Cantor(a):*</label> <br>
+            <p-multiSelect [options]="artists" formControlName="singer" optionLabel="name" optionValue="id" display="chip" appendTo="body" [style]="{'width':'268px', 'height': '40px'}"></p-multiSelect>
+            <!-- <input style="width: 600px;" class="cast-input" id="cast" name="cast" type="text" required> -->
+        </div>
+        <div class="campos" >
+            <label class="label" for="duration">Duração:*</label> <br>
+            <input style="width: 230px;" formControlName="duration" class="duration-input" id="duration" name="duration" type="text" required>
+        </div>
+        <div class="campos">
+            <p>Gênero:*</p>
+            <p-dropdown formControlName="genres" required [placeholder]="'Selecione o gênero'"
+            [options]="genres" optionLabel="description" optionValue="value"
+            [style]="{'width':'268px', 'height': '60px'}"></p-dropdown>
+        </div>
+        <div class="campos">
+            <label class="label" for="photo">Foto:*</label> <br>
+            <input style="width: 230px;" class="input" id="photo" name="photo" type="file" required>
+        </div>
+        <div style="padding-left: 400px;">
+            <button id="button" type="submit">Cadastrar Álbum</button>
+        </div>
+    </form>
