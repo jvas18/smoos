@@ -19,7 +19,6 @@ namespace Smoos.Domain.Albums
         {
             Duration = duration;
             ArtistId = artistId;
-           // Songs = songs;
         }
     }
 }

@@ -18,6 +18,7 @@ namespace Smoos.Domain.Works
         public Guid Id { get; set; }
         public string Name { get; set; }
         public string ReleaseYear { get; set; }
+        public decimal Rate { get; set; }
         public ICollection<Rating> Ratings { get; set; }
     }
 }

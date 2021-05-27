@@ -33,6 +33,9 @@ namespace Smoos.Data.Mapping
             builder.Property(x => x.Publisher)
                  .IsRequired()
                  .HasColumnType("varchar(20)");
+            builder.Property(x => x.Rate)
+            .IsRequired()
+            .HasColumnType("decimal(5)");
 
             builder.HasOne(x => x.Author)
                 .WithMany()

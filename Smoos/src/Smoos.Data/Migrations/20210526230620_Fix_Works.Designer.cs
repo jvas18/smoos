@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Smoos.Data;
 
 namespace Smoos.Data.Migrations
 {
     [DbContext(typeof(SmoosContext))]
-    partial class SmoosContextModelSnapshot : ModelSnapshot
+    [Migration("20210526230620_Fix_Works")]
+    partial class Fix_Works
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder

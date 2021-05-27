@@ -19,6 +19,7 @@ namespace Smoos.Domain.Songs
         public Artist Author { get; set; }
         public string Duration { get; set; }
         public Album Album { get; set; }
+        public Guid AlbumId { get; set; }
         public Guid ArtistId { get; set; }
     }
 }

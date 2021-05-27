@@ -27,9 +27,18 @@ namespace Smoos.Data.Mapping
                .IsRequired()
                .HasColumnType("varchar(30)");
 
+            builder.Property(x => x.Rate)
+             .IsRequired()
+             .HasColumnType("decimal(5)");
+
             builder.HasOne(x => x.Author)
                 .WithMany()
                 .HasForeignKey(x => x.ArtistId);
+
+            builder.HasOne(x => x.Album)
+                .WithMany(x => x.Songs)
+                .HasForeignKey(x => x.AlbumId)
+                .OnDelete(DeleteBehavior.NoAction);
 
             builder.HasMany(x => x.Ratings)
                     .WithOne();

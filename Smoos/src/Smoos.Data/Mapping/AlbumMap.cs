@@ -32,6 +32,10 @@ namespace Smoos.Data.Mapping
                 .WithMany()
                 .HasForeignKey(x => x.ArtistId);
 
+            builder.Property(x => x.Rate)
+            .IsRequired()
+            .HasColumnType("decimal(5)");
+
             builder.HasMany(x => x.Ratings)
             .WithOne();
         }
