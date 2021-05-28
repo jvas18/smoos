@@ -1,10 +1,4 @@
-C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.csprojAssemblyReference.cache
-C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.GeneratedMSBuildEditorConfig.editorconfig
-C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.AssemblyInfoInputs.cache
-C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.AssemblyInfo.cs
-C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.csproj.CoreCompileInputs.cache
-C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.MvcApplicationPartsAssemblyInfo.cs
-C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\jujus\Desktop\smoos-updated\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.pdb
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\appsettings.Development.json
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\appsettings.json
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Smoos.Api.exe
@@ -49,6 +43,7 @@ C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Mi
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Microsoft.OpenApi.dll
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\NetDevPack.Security.JwtExtensions.dll
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Newtonsoft.Json.dll
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Newtonsoft.Json.Bson.dll
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Scrutor.dll
@@ -93,6 +88,13 @@ C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Sm
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Smoos.Domain.dll
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Smoos.Data.pdb
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Smoos.Domain.pdb
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.csprojAssemblyReference.cache
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.AssemblyInfoInputs.cache
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.AssemblyInfo.cs
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.csproj.CoreCompileInputs.cache
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.MvcApplicationPartsAssemblyInfo.cs
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.MvcApplicationPartsAssemblyInfo.cache
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\staticwebassets\Smoos.Api.StaticWebAssets.Manifest.cache
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\staticwebassets\Smoos.Api.StaticWebAssets.xml
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\scopedcss\bundle\Smoos.Api.styles.css
@@ -102,5 +104,3 @@ C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Sm
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\ref\Smoos.Api.dll
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.pdb
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.genruntimeconfig.cache
-C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\NetDevPack.Security.JwtExtensions.dll
-C:\Users\jujus\Desktop\smoos-updated\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.pdb
