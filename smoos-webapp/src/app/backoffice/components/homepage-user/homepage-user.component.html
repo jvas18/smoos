@@ -43,164 +43,42 @@
 <h1>Top Filmes</h1>
 <div class="movie-wrapper">
     <section id="section1">
-      <a href="#section2">‹</a>
-        <div class="item">
-          <img src="../../../../assets/imgs/avengers-cover.jpg" alt="The Avengers - Endgame">
+      <a >‹</a>
+        <div class="item" *ngFor="let movie of movies">
+          <img [src]="movie?.poster" [alt]="movie?.name" [routerLink]="['/movie-details',movie.id]">
         </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/avengers-cover.jpg" alt="The Avengers - Endgame">
-        </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/avengers-cover.jpg" alt="The Avengers - Endgame">
-        </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/avengers-cover.jpg" alt="The Avengers - Endgame">
-        </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/avengers-cover.jpg" alt="The Avengers - Endgame">
-        </div>
-      <a href="#section2">›</a>
-    </section>
-    <section id="section2">
-        <a href="#section1">‹</a>
-          <div class="item">
-            <img src="../../../../assets/imgs/avengers-cover.jpg" alt="The Avengers - Endgame">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/avengers-cover.jpg" alt="The Avengers - Endgame">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/avengers-cover.jpg" alt="The Avengers - Endgame">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/avengers-cover.jpg" alt="The Avengers - Endgame">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/avengers-cover.jpg" alt="The Avengers - Endgame">
-          </div>
-        <a href="#section1">›</a>
+        <a>›</a>
       </section>
 </div>
 <h1>Top Álbuns</h1>
 <div class="album-wrapper">
     <section id="section1">
-      <a href="#section2">‹</a>
-        <div class="item">
-          <img src="../../../../assets/imgs/sour-cover.png" alt="Olivia Rodrigo - Sour">
+      <a>‹</a>
+        <div class="item" *ngFor="let album of albums">
+          <img [src]="album?.poster" [alt]="album?.name" [routerLink]="['/album-details',album.id]">
         </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/sour-cover.png" alt="Olivia Rodrigo - Sour">
-        </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/sour-cover.png" alt="Olivia Rodrigo - Sour">
-        </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/sour-cover.png" alt="Olivia Rodrigo - Sour">
-        </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/sour-cover.png" alt="Olivia Rodrigo - Sour">
-        </div>
-      <a href="#section2">›</a>
+        
+      <a>›</a>
     </section>
-    <section id="section2">
-        <a href="#section1">‹</a>
-          <div class="item">
-            <img src="../../../../assets/imgs/sour-cover.png" alt="Olivia Rodrigo - Sour">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/sour-cover.png" alt="Olivia Rodrigo - Sour">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/sour-cover.png" alt="Olivia Rodrigo - Sour">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/sour-cover.png" alt="Olivia Rodrigo - Sour">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/sour-cover.png" alt="Olivia Rodrigo - Sour">
-          </div>
-        <a href="#section1">›</a>
-      </section>
+    
 </div>
 <h1>Top Músicas</h1>
 <div class="album-wrapper">
     <section id="section1">
-      <a href="#section2">‹</a>
-        <div class="item">
-          <img src="../../../../assets/imgs/dynamite-cover.jpg" alt="BTS - Dynamite">
+      <a>‹</a>
+        <div class="item" *ngFor="let song of songs">
+          <img [src]="song.poster" [alt]="song.name" [routerLink]="['/song-details',song.id]">
         </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/dynamite-cover.jpg" alt="BTS - Dynamite">
-        </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/dynamite-cover.jpg" alt="BTS - Dynamite">
-        </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/dynamite-cover.jpg" alt="BTS - Dynamite">
-        </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/dynamite-cover.jpg" alt="BTS - Dynamite">
-        </div>
-      <a href="#section2">›</a>
+      <a>›</a>
     </section>
-    <section id="section2">
-        <a href="#section1">‹</a>
-          <div class="item">
-            <img src="../../../../assets/imgs/dynamite-cover.jpg" alt="BTS - Dynamite">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/dynamite-cover.jpg" alt="BTS - Dynamite">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/dynamite-cover.jpg" alt="BTS - Dynamite">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/dynamite-cover.jpg" alt="BTS - Dynamite">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/dynamite-cover.jpg" alt="BTS - Dynamite">
-          </div>
-        <a href="#section1">›</a>
-      </section>
 </div>
 <h1>Top Livros</h1>
 <div class="movie-wrapper">
     <section id="section1">
-      <a href="#section2">‹</a>
-        <div class="item">
-          <img src="../../../../assets/imgs/hp-cover.jpg" alt="Harry Potter and the Deathly Hallows">
+      <a>‹</a>
+        <div class="item" *ngFor="let book of books">
+          <img [src]="book?.poster" [alt]="book?.name" [routerLink]="['/book-details',book.id]">
         </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/hp-cover.jpg" alt="Harry Potter and the Deathly Hallows">
-        </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/hp-cover.jpg" alt="Harry Potter and the Deathly Hallows">
-        </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/hp-cover.jpg" alt="Harry Potter and the Deathly Hallows">
-        </div>
-        <div class="item">
-          <img src="../../../../assets/imgs/hp-cover.jpg" alt="Harry Potter and the Deathly Hallows">
-        </div>
-      <a href="#section2">›</a>
-    </section>
-    <section id="section2">
-        <a href="#section1">‹</a>
-          <div class="item">
-            <img src="../../../../assets/imgs/hp-cover.jpg" alt="Harry Potter and the Deathly Hallows">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/hp-cover.jpg" alt="Harry Potter and the Deathly Hallows">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/hp-cover.jpg" alt="Harry Potter and the Deathly Hallows">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/hp-cover.jpg" alt="Harry Potter and the Deathly Hallows">
-          </div>
-          <div class="item">
-            <img src="../../../../assets/imgs/hp-cover.jpg" alt="Harry Potter and the Deathly Hallows">
-          </div>
-        <a href="#section1">›</a>
+        <a>›</a>
       </section>
 </div>

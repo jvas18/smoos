@@ -14,7 +14,10 @@
                     </div>
                     <div>
                         <label class="label" for="picture">Foto:*</label> <br>
-                        <input class="input" id="picture" name="picture" type="file" required>
+                        <ng-container formGroupName="photo">
+                            <input style="width: 268px;" #photo accept='image/*' class="input" id="photo"  name="photo" type="file"  (change)="onAttachment($event, form.get('photo'), photo.files)" required>
+                
+                        </ng-container>
                     </div>
                     <div>
                         <label class="label" for="description">Descrição:*</label> <br>

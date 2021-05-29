@@ -20,7 +20,10 @@ namespace Smoos.Domain.Ratings.Projections
                         {
                             Id = entity.UserId,
                             Name = entity.User.Name
-                        }
+                        },
+                        Title = entity.Title,
+                        CreatedAt = entity.CreatedAt
+
 
                     });
 

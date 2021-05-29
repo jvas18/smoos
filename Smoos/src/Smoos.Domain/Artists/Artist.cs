@@ -20,6 +20,7 @@ namespace Smoos.Domain.Artists
         public Guid Id { get; private set; }
         public string Name { get; private set; }
         public int Age { get; private set; }
+        public string Photo { get; set; }
         public ICollection<Movie> Movies = new List<Movie>();
 
 

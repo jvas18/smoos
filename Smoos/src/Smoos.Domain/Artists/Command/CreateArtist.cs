@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Smoos.Domain.Artists.ViewModels;
+using Smoos.Domain.Common;
 
 namespace Smoos.Domain.Artists.Command
 {
@@ -7,6 +8,7 @@ namespace Smoos.Domain.Artists.Command
     {
         public string Name { get;  set; }
         public int Age { get;  set; }
+        public FileInput Photo { get; set; }
         public string Description { get; set; }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Smoos.Domain.Ratings;
 using Smoos.Domain.Ratings.Commands;
 using Smoos.Domain.Ratings.Projections;
@@ -21,14 +22,14 @@ namespace Smoos.Api.Controllers
             _ratingRepository = ratingRepository;
         }
 
-        [HttpPost("/movie-rating")]
+        [HttpPost("movie-rating")]
         public async Task<IActionResult> Post([FromBody] CreateMovieRating command)
         {
             return command == null ?
               UnprocessableEntity()
               : Ok(await _mediator.Send(command));
         }
-        [HttpPost("/book-rating")]
+        [HttpPost("book-rating")]
         public async Task<IActionResult> Post([FromBody] CreateBookRating command)
         {
             return command == null ?
@@ -49,25 +50,25 @@ namespace Smoos.Api.Controllers
               UnprocessableEntity()
               : Ok(await _mediator.Send(command));
         }
-        [HttpGet("{movieId:guid}")]
+        [HttpGet("movie/{movieId:guid}")]
         public async Task<IActionResult> GetMoviesRatings(Guid movieId)
         {
-            return await Task.FromResult(Ok((_ratingRepository.ListAsNoTracking(x=>x.MovieId == movieId).ToVm())));
+            return await Task.FromResult(Ok((_ratingRepository.ListAsNoTracking(x=>x.MovieId == movieId).Include(x=>x.User).ToVm())));
         }
-        [HttpGet("{songId:guid}")]
+        [HttpGet("song/{songId:guid}")]
         public async Task<IActionResult> GetSongsRatings(Guid songId)
         {
-            return await Task.FromResult(Ok((_ratingRepository.ListAsNoTracking(x => x.SongId == songId).ToVm())));
+            return await Task.FromResult(Ok((_ratingRepository.ListAsNoTracking(x => x.SongId == songId).Include(x => x.User).ToVm())));
         }
-        [HttpGet("{bookId:guid}")]
+        [HttpGet("book/{bookId:guid}")]
         public async Task<IActionResult> GetBookRatings(Guid bookId)
         {
             return await Task.FromResult(Ok((_ratingRepository.ListAsNoTracking(x => x.BookId == bookId).ToVm())));
         }
-        [HttpGet("{albumId:guid}")]
+        [HttpGet("album/{albumId:guid}")]
         public async Task<IActionResult> GetAlbumRatings(Guid albumId)
         {
-            return await Task.FromResult(Ok((_ratingRepository.ListAsNoTracking(x => x.BookId == albumId).ToVm())));
+            return await Task.FromResult(Ok((_ratingRepository.ListAsNoTracking(x => x.AlbumId == albumId).ToVm())));
         }
 
     }

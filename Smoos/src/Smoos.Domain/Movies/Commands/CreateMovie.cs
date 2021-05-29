@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Smoos.Domain.Common;
 using Smoos.Domain.Movies.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -15,5 +16,6 @@ namespace Smoos.Domain.Movies.Commands
         public string Summary { get; set; }
         public string Country { get; set; }
         public EMovieGenre MovieGenres { get; set; }
+        public FileInput Poster { get; set; }
     }
 }

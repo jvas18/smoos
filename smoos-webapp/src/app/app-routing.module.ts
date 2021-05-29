@@ -43,19 +43,19 @@ const routes: Routes = [
     component: SuggestionsUserComponent
   },
   {
-    path: 'movie-details',
+    path: 'movie-details/:id',
     component: MovieDetailsComponent
   },
   {
-    path: 'book-details',
+    path: 'book-details/:id',
     component: BookDetailsComponent
   },
   {
-    path: 'song-details',
+    path: 'song-details/:id',
     component: SongDetailsComponent
   },
   {
-    path: 'album-details',
+    path: 'album-details/:id',
     component: AlbumDetailsComponent
   }
 ];

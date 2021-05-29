@@ -31,6 +31,10 @@ namespace Smoos.Data.Mapping
             .IsRequired()
             .HasColumnType("varchar(20)");
 
+            builder.Property(x => x.Poster)
+           .IsRequired()
+           .HasColumnType("varchar(max)");
+
             builder.Property(x => x.Country)
                  .IsRequired()
                  .HasColumnType("varchar(20)");
@@ -44,9 +48,6 @@ namespace Smoos.Data.Mapping
 
             builder.HasMany(x => x.Actors)
                 .WithMany(x => x.Movies);
-
-            builder.HasMany(x => x.Ratings)
-            .WithOne();
 
 
         }

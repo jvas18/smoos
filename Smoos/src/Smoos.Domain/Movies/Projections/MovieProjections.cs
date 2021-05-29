@@ -1,5 +1,6 @@
 ﻿using Smoos.Domain.Artists.Projections;
 using Smoos.Domain.Movies.ViewModels;
+using Smoos.Domain.Ratings.Projections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -18,8 +19,11 @@ namespace Smoos.Domain.Movies.Projections
             Summary = entity.Summary,
             Country = entity.Country,
             Duration = entity.Duration,
+            Rate = entity.Rate,
+            Poster = entity.Poster,
             MovieGenres = entity.MovieGenres,
-            Actors = entity.Actors.ToVm()
+            Actors = entity.Actors.ToVm(),
+            Ratings = entity.Ratings.ToVm()
 
         });
 

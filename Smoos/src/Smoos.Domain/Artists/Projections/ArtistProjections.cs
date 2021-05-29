@@ -13,6 +13,7 @@ namespace Smoos.Domain.Artists.Projections
          {
              Id = entity.Id,
              Name = entity.Name,
+             Photo = entity.Photo,
              Description = entity.Description,
              Age = entity.Age
             

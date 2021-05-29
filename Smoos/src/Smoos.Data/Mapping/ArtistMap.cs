@@ -26,6 +26,9 @@ namespace Smoos.Data.Mapping
             builder.Property(x => x.Age)
                .IsRequired()
                .HasColumnName("Age");
+            builder.Property(x => x.Photo)
+          .IsRequired()
+          .HasColumnType("varchar(max)");
 
             builder.ToTable("Artists");
         }

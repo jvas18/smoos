@@ -104,3 +104,11 @@ C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Sm
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\ref\Smoos.Api.dll
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.pdb
 C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\obj\Debug\net5.0\Smoos.Api.genruntimeconfig.cache
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Azure.Core.dll
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Azure.Storage.Blobs.dll
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Azure.Storage.Common.dll
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Microsoft.Azure.KeyVault.Core.dll
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Microsoft.Azure.Storage.Blob.dll
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Microsoft.Azure.Storage.Common.dll
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\jvict\OneDrive\Documentos\smoos\Smoos\src\Smoos.Api\bin\Debug\net5.0\System.Memory.Data.dll

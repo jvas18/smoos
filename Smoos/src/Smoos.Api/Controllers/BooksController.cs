@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Smoos.Domain.Books;
 using Smoos.Domain.Books.Commands;
 using Smoos.Domain.Books.Projections;
@@ -31,10 +32,15 @@ namespace Smoos.Api.Controllers
               UnprocessableEntity()
               : Ok(await _mediator.Send(command));
         }
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            return await Task.FromResult(Ok(_booksRepository.ListAsNoTracking().ToVm()));
+        }
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> Get(Guid id)
         {
-            return await Task.FromResult(Ok((_booksRepository.ListAsNoTracking(x => x.Id == id).FirstOrDefault().ToVm())));
+            return await Task.FromResult(Ok((_booksRepository.ListAsNoTracking(x => x.Id == id).Include(x => x.Ratings).Include(x => x.Author).ToVm().FirstOrDefault())));
         }
     }
 }

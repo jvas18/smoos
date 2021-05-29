@@ -19,13 +19,39 @@ namespace Smoos.Data.Mapping
                     .IsRequired()
                     .HasColumnType("varchar(max)");
 
+            builder.Property(x => x.Title)
+                   .IsRequired()
+                   .HasColumnType("varchar(200)");
+
             builder.Property(x => x.Stars)
                  .IsRequired()
                  .HasColumnType("int");
 
+            builder.Property(x => x.CreatedAt)
+                 .IsRequired();
+
             builder.HasOne(x => x.User)
                 .WithMany()
                 .HasForeignKey(x => x.UserId);
+
+            builder.HasOne(x => x.Movie)
+              .WithMany()
+              .HasForeignKey(x => x.MovieId)
+              .IsRequired(false);
+
+            builder.HasOne(x => x.Book)
+             .WithMany()
+             .HasForeignKey(x => x.BookId)
+             .IsRequired(false);
+
+            builder.HasOne(x => x.Song)
+             .WithMany()
+             .HasForeignKey(x => x.SongId)
+             .IsRequired(false);
+            builder.HasOne(x => x.Album)
+            .WithMany()
+            .HasForeignKey(x => x.AlbumId)
+            .IsRequired(false);
         }
     }
 }

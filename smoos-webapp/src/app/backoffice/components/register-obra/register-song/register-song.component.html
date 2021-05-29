@@ -9,7 +9,9 @@
     </div>
     <div class="campos">
         <label class="label" for="author">Cantor(a):*</label> <br>
-        <p-multiSelect [options]="artists" formControlName="singer" optionLabel="name" optionValue="id" display="chip" appendTo="body" [style]="{'width':'268px', 'height': '40px'}"></p-multiSelect>
+        <p-dropdown [options]="artists" formControlName="artistId" required [placeholder]="'Selecione o Cantor'"
+        optionLabel="name" optionValue="id"
+        [style]="{'width':'268px','height':'60px'}"></p-dropdown>
     </div>
     <div class="campos" >
         <label class="label" for="duration">Duração:*</label> <br>
@@ -23,20 +25,18 @@
     </div>
     <div class="campos">
         <label class="label" for="photo">Foto:*</label> <br>
-        <input style="width: 230px;" class="input" id="photo" name="photo" type="file" required>
+        <ng-container formGroupName="poster">
+            <input style="width: 268px;" #poster accept='image/*' class="input" id="poster"  name="poster" type="file"  (change)="onAttachment($event, form.get('poster'), poster.files)" required>
+
+        </ng-container>
     </div>
     <div class="campos">
-        <label class="label" for="pertenceAlbum">Pertence à algum álbum:*</label> <br>
-        <p-radioButton name="yes" value="yes" [(ngModel)]="pertenceAlbum" formControlName="sePertenceAlbum" required></p-radioButton>
-        <label for="yes">Sim</label>
-        <p-radioButton name="no" value="no" [(ngModel)]="pertenceAlbum" formControlName="sePertenceAlbum" required></p-radioButton>
-        <label for="no">Não</label>
-    </div>
-    <div class="campos">
-        <label class="label" for="cast">Álbum:*</label> <br>
-        <p-multiSelect [options]="albums" formControlName="album" optionLabel="name" optionValue="id" display="chip" appendTo="body" [style]="{'width':'268px', 'height': '40px'}"></p-multiSelect>
+        <label class="label" for="album">Álbum:*</label> <br>
+        <p-dropdown formControlName="albumId" required [placeholder]="'Selecione o album'"
+        [options]="albums" optionLabel="name" optionValue="id"
+        [style]="{'width':'268px', 'height': '60px'}"></p-dropdown>
     </div>
     <div style="padding-left: 400px;">
-        <button id="button" type="submit">Cadastrar Música</button>
+        <button id="button" type="submit" (click)="save()">Cadastrar Música</button>
     </div>
 </form>

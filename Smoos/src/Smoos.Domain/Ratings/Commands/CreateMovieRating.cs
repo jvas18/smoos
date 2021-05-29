@@ -10,6 +10,7 @@ namespace Smoos.Domain.Ratings.Commands
     {
         public string Comment { get; set; }
         public int Stars { get; set; }
+        public string Title { get; set; }
         public Guid UserId { get; set; }
         public Guid MovieId { get; set; }
 

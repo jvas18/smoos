@@ -12,16 +12,18 @@
   </ItemGroup>
 
   <ItemGroup>
+    <PackageReference Include="Azure.Storage.Blobs" Version="12.8.4" />
     <PackageReference Include="FluentValidation" Version="9.5.3" />
     <PackageReference Include="Jwks.Manager.Store.EntityFrameworkCore" Version="4.0.4" />
     <PackageReference Include="MediatR" Version="9.0.0" />
     <PackageReference Include="Microsoft.AspNetCore.Http.Features" Version="5.0.4" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Azure.Storage.Blob" Version="11.2.3" />
     <PackageReference Include="Microsoft.IdentityModel.JsonWebTokens" Version="6.10.2" />
     <PackageReference Include="Microsoft.IdentityModel.Tokens" Version="6.10.2" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="NovaPasta\" />
     <Folder Include="Users\Messages\" />
   </ItemGroup>
 

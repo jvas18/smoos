@@ -13,11 +13,12 @@ namespace Smoos.Domain.Songs.ViewModels
         public string Name { get; set; }
         public string ReleaseYear { get; set; }
         public decimal Rate { get; set; }
-        public ICollection<RatingVm> Ratings { get; set; }
+        public IEnumerable<RatingVm> Ratings { get; set; }
         public ArtistVm Singer { get; set; }
         public string Duration { get; set; }
         public AlbumVm Album { get; set; }
-        public Guid AlbumId { get; set; }
+        public string Poster { get; set; }
+        public Guid? AlbumId { get; set; }
         public Guid ArtistId { get; set; }
     }
 }

@@ -10,6 +10,8 @@ namespace Smoos.Domain.Ratings.ViewModels
         public Guid Id { get; set; }
         public string Comment { get; set; }
         public int Stars { get; set; }
+        public string Title { get; set; }
+        public DateTime? CreatedAt { get; set; }
         public UserVm User { get; set; }
         public Guid UserId { get; set; }
     }

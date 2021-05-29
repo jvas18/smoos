@@ -10,8 +10,8 @@ using Smoos.Data;
 namespace Smoos.Data.Migrations
 {
     [DbContext(typeof(SmoosContext))]
-    [Migration("20210417024829_Add-Ratings")]
-    partial class AddRatings
+    [Migration("20210529200751_Initial")]
+    partial class Initial
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -36,6 +36,32 @@ namespace Smoos.Data.Migrations
                     b.ToTable("ArtistMovie");
                 });
 
+            modelBuilder.Entity("Jwks.Manager.SecurityKeyWithPrivate", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Algorithm")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime>("CreationDate")
+                        .HasColumnType("datetime2");
+
+                    b.Property<string>("KeyId")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Parameters")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("Type")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.HasKey("Id");
+
+                    b.ToTable("SecurityKeys");
+                });
+
             modelBuilder.Entity("Smoos.Domain.Albums.Album", b =>
                 {
                     b.Property<Guid>("Id")
@@ -52,6 +78,13 @@ namespace Smoos.Data.Migrations
                     b.Property<string>("Name")
                         .IsRequired()
                         .HasColumnType("varchar(150)");
+
+                    b.Property<string>("Poster")
+                        .IsRequired()
+                        .HasColumnType("varchar(max)");
+
+                    b.Property<decimal>("Rate")
+                        .HasColumnType("decimal(5)");
 
                     b.Property<string>("ReleaseYear")
                         .IsRequired()
@@ -84,6 +117,10 @@ namespace Smoos.Data.Migrations
                         .HasColumnType("varchar(100)")
                         .HasColumnName("Name");
 
+                    b.Property<string>("Photo")
+                        .IsRequired()
+                        .HasColumnType("varchar(max)");
+
                     b.HasKey("Id");
 
                     b.ToTable("Artists");
@@ -106,9 +143,16 @@ namespace Smoos.Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(10)");
 
+                    b.Property<string>("Poster")
+                        .IsRequired()
+                        .HasColumnType("varchar(max)");
+
                     b.Property<string>("Publisher")
                         .IsRequired()
                         .HasColumnType("varchar(20)");
+
+                    b.Property<decimal>("Rate")
+                        .HasColumnType("decimal(5)");
 
                     b.Property<string>("ReleaseYear")
                         .IsRequired()
@@ -180,6 +224,13 @@ namespace Smoos.Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(150)");
 
+                    b.Property<string>("Poster")
+                        .IsRequired()
+                        .HasColumnType("varchar(max)");
+
+                    b.Property<decimal>("Rate")
+                        .HasColumnType("decimal(5)");
+
                     b.Property<string>("ReleaseYear")
                         .IsRequired()
                         .HasColumnType("varchar(4)");
@@ -199,17 +250,65 @@ namespace Smoos.Data.Migrations
                         .ValueGeneratedOnAdd()
                         .HasColumnType("uniqueidentifier");
 
+                    b.Property<Guid?>("AlbumId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("AlbumId1")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("BookId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("BookId1")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<string>("Comment")
                         .IsRequired()
                         .HasColumnType("varchar(max)");
 
+                    b.Property<DateTime?>("CreatedAt")
+                        .IsRequired()
+                        .HasColumnType("datetime2");
+
+                    b.Property<Guid?>("MovieId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("MovieId1")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("SongId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<Guid?>("SongId1")
+                        .HasColumnType("uniqueidentifier");
+
                     b.Property<int>("Stars")
                         .HasColumnType("int");
+
+                    b.Property<string>("Title")
+                        .IsRequired()
+                        .HasColumnType("varchar(200)");
 
                     b.Property<Guid>("UserId")
                         .HasColumnType("uniqueidentifier");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("AlbumId");
+
+                    b.HasIndex("AlbumId1");
+
+                    b.HasIndex("BookId");
+
+                    b.HasIndex("BookId1");
+
+                    b.HasIndex("MovieId");
+
+                    b.HasIndex("MovieId1");
+
+                    b.HasIndex("SongId");
+
+                    b.HasIndex("SongId1");
 
                     b.HasIndex("UserId");
 
@@ -236,6 +335,13 @@ namespace Smoos.Data.Migrations
                         .IsRequired()
                         .HasColumnType("varchar(150)");
 
+                    b.Property<string>("Poster")
+                        .IsRequired()
+                        .HasColumnType("varchar(max)");
+
+                    b.Property<decimal>("Rate")
+                        .HasColumnType("decimal(5)");
+
                     b.Property<string>("ReleaseYear")
                         .IsRequired()
                         .HasColumnType("varchar(4)");
@@ -247,6 +353,30 @@ namespace Smoos.Data.Migrations
                     b.HasIndex("ArtistId");
 
                     b.ToTable("Songs");
+                });
+
+            modelBuilder.Entity("Smoos.Domain.Suggestions.Suggestion", b =>
+                {
+                    b.Property<Guid>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("uniqueidentifier");
+
+                    b.Property<string>("Category")
+                        .IsRequired()
+                        .HasColumnType("varchar(50)");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("varchar(max)");
+
+                    b.Property<Guid>("UserId")
+                        .HasColumnType("uniqueidentifier");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("UserId");
+
+                    b.ToTable("suggestions");
                 });
 
             modelBuilder.Entity("Smoos.Domain.Users.User", b =>
@@ -322,6 +452,73 @@ namespace Smoos.Data.Migrations
 
             modelBuilder.Entity("Smoos.Domain.Ratings.Rating", b =>
                 {
+                    b.HasOne("Smoos.Domain.Albums.Album", "Album")
+                        .WithMany()
+                        .HasForeignKey("AlbumId");
+
+                    b.HasOne("Smoos.Domain.Albums.Album", null)
+                        .WithMany("Ratings")
+                        .HasForeignKey("AlbumId1");
+
+                    b.HasOne("Smoos.Domain.Books.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId");
+
+                    b.HasOne("Smoos.Domain.Books.Book", null)
+                        .WithMany("Ratings")
+                        .HasForeignKey("BookId1");
+
+                    b.HasOne("Smoos.Domain.Movies.Movie", "Movie")
+                        .WithMany()
+                        .HasForeignKey("MovieId");
+
+                    b.HasOne("Smoos.Domain.Movies.Movie", null)
+                        .WithMany("Ratings")
+                        .HasForeignKey("MovieId1");
+
+                    b.HasOne("Smoos.Domain.Songs.Song", "Song")
+                        .WithMany()
+                        .HasForeignKey("SongId");
+
+                    b.HasOne("Smoos.Domain.Songs.Song", null)
+                        .WithMany("Ratings")
+                        .HasForeignKey("SongId1");
+
+                    b.HasOne("Smoos.Domain.Users.User", "User")
+                        .WithMany()
+                        .HasForeignKey("UserId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Album");
+
+                    b.Navigation("Book");
+
+                    b.Navigation("Movie");
+
+                    b.Navigation("Song");
+
+                    b.Navigation("User");
+                });
+
+            modelBuilder.Entity("Smoos.Domain.Songs.Song", b =>
+                {
+                    b.HasOne("Smoos.Domain.Albums.Album", "Album")
+                        .WithMany("Songs")
+                        .HasForeignKey("AlbumId")
+                        .OnDelete(DeleteBehavior.NoAction);
+
+                    b.HasOne("Smoos.Domain.Artists.Artist", "Author")
+                        .WithMany()
+                        .HasForeignKey("ArtistId");
+
+                    b.Navigation("Album");
+
+                    b.Navigation("Author");
+                });
+
+            modelBuilder.Entity("Smoos.Domain.Suggestions.Suggestion", b =>
+                {
                     b.HasOne("Smoos.Domain.Users.User", "User")
                         .WithMany()
                         .HasForeignKey("UserId")
@@ -331,21 +528,26 @@ namespace Smoos.Data.Migrations
                     b.Navigation("User");
                 });
 
+            modelBuilder.Entity("Smoos.Domain.Albums.Album", b =>
+                {
+                    b.Navigation("Ratings");
+
+                    b.Navigation("Songs");
+                });
+
+            modelBuilder.Entity("Smoos.Domain.Books.Book", b =>
+                {
+                    b.Navigation("Ratings");
+                });
+
+            modelBuilder.Entity("Smoos.Domain.Movies.Movie", b =>
+                {
+                    b.Navigation("Ratings");
+                });
+
             modelBuilder.Entity("Smoos.Domain.Songs.Song", b =>
                 {
-                    b.HasOne("Smoos.Domain.Albums.Album", "Album")
-                        .WithMany()
-                        .HasForeignKey("AlbumId");
-
-                    b.HasOne("Smoos.Domain.Artists.Artist", "Author")
-                        .WithMany()
-                        .HasForeignKey("ArtistId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
-
-                    b.Navigation("Album");
-
-                    b.Navigation("Author");
+                    b.Navigation("Ratings");
                 });
 #pragma warning restore 612, 618
         }

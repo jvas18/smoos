@@ -20,8 +20,8 @@ namespace Smoos.Data.Mapping
             builder.Property(x=>x.Password)
                  .IsRequired()
                    .HasColumnName("Password")
-                 .HasMaxLength(20)
-                .HasColumnType("varchar(20)");
+                 .HasMaxLength(500)
+                .HasColumnType("varchar(500)");
 
             builder.Property(x => x.Picture)
                   .HasColumnName("Picture")

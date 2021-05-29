@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Smoos.Domain.Artists;
 using Smoos.Domain.Artists.Command;
 using Smoos.Domain.Artists.Projections;

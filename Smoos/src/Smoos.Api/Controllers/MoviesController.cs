@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Smoos.Domain.Movies;
 using Smoos.Domain.Movies.Commands;
 using Smoos.Domain.Movies.Projections;
@@ -30,11 +31,15 @@ namespace Smoos.Api.Controllers
               UnprocessableEntity()
               : Ok(await _mediator.Send(command));
         }
-
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            return await Task.FromResult(Ok(_movieRepository.ListAsNoTracking().ToVm()));
+        }
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> Get(Guid id)
         {
-            return await Task.FromResult(Ok((_movieRepository.ListAsNoTracking(x => x.Id == id).FirstOrDefault().ToVm())));
+            return await Task.FromResult(Ok((_movieRepository.ListAsNoTracking(x => x.Id == id).Include(x => x.Actors).Include(x => x.Ratings).ToVm().FirstOrDefault())));
         }
     }
 }

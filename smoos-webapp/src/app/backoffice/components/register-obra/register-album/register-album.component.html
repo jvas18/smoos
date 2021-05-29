@@ -9,7 +9,9 @@
         </div>
         <div class="campos">
             <label class="label" for="cast">Cantor(a):*</label> <br>
-            <p-multiSelect [options]="artists" formControlName="singer" optionLabel="name" optionValue="id" display="chip" appendTo="body" [style]="{'width':'268px', 'height': '40px'}"></p-multiSelect>
+            <p-dropdown [options]="artists" formControlName="artistId" required [placeholder]="'Selecione o autor'"
+            optionLabel="name" optionValue="id"
+            [style]="{'width':'268px','height':'60px'}"></p-dropdown>
             <!-- <input style="width: 600px;" class="cast-input" id="cast" name="cast" type="text" required> -->
         </div>
         <div class="campos" >
@@ -24,9 +26,12 @@
         </div>
         <div class="campos">
             <label class="label" for="photo">Foto:*</label> <br>
-            <input style="width: 230px;" class="input" id="photo" name="photo" type="file" required>
+            <ng-container formGroupName="poster">
+                <input style="width: 268px;" #poster accept='image/*' class="input" id="poster"  name="poster" type="file"  (change)="onAttachment($event, form.get('poster'), poster.files)" required>
+    
+            </ng-container>
         </div>
         <div style="padding-left: 400px;">
-            <button id="button" type="submit">Cadastrar Álbum</button>
+            <button id="button" type="submit" (click)="save()">Cadastrar Álbum</button>
         </div>
     </form>

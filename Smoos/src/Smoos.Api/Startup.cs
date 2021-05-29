@@ -63,6 +63,7 @@ namespace Smoos.Api
                         });
             });
             services.AppAddIoCServices(Configuration, Env);
+            services.AppAddAzureStorageService(Configuration);
             services.AppAddAuthorization(Configuration, Env);
             services.AddSwaggerGen(c =>
             {

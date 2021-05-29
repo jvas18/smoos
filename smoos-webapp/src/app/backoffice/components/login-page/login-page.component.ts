@@ -30,7 +30,7 @@ export class LoginPageComponent implements OnInit {
 
     ).subscribe(resp => {
       this.appService.storeAccessToken(resp.accessToken);
-      this.appService.storeUser(resp.user);
+      this.appService.storeUser(resp.sessionUser);
       this.router.navigate(['/homepage-user']);
     });
   }

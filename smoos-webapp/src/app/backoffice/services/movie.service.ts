@@ -13,6 +13,7 @@ import { map } from 'rxjs/operators';
       this.url = `https://localhost:5001/movies`;
     }
     get = (id: string): Observable<any> => this.http.get<any>(`${this.url}/${id}`).pipe(map(resp => resp));
+    getAll = (): Observable<any> => this.http.get<any>(`${this.url}/`).pipe(map(resp => resp));
     update = (id: string, data: any): Observable<any> => this.http.put<any>(`${this.url}/${id}`, data).pipe(map(resp => resp));
     create = (data: any): Observable<any> => this.http.post<any>(`${this.url}`, data).pipe(map(resp => resp));
     remove = (id: string): Observable<any> => this.http.delete<any>(`${this.url}/${id}`).pipe(map(resp => resp));

@@ -1,5 +1,6 @@
 ﻿using MediatR;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 using Smoos.Domain.Songs;
 using Smoos.Domain.Songs.Commands;
 using Smoos.Domain.Songs.Projections;
@@ -29,10 +30,15 @@ namespace Smoos.Api.Controllers
               UnprocessableEntity()
               : Ok(await _mediator.Send(command));
         }
+        [HttpGet]
+        public async Task<IActionResult> Get()
+        {
+            return await Task.FromResult(Ok(_songsRepository.ListAsNoTracking().ToVm()));
+        }
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> Get(Guid id)
         {
-            return await Task.FromResult(Ok((_songsRepository.ListAsNoTracking(x => x.Id == id).FirstOrDefault().ToVm())));
+            return await Task.FromResult(Ok((_songsRepository.ListAsNoTracking(x => x.Id == id).Include(x=>x.Author).Include(x=>x.Ratings).ToVm().FirstOrDefault())));
         }
     }
 }

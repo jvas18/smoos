@@ -25,16 +25,8 @@ namespace Smoos.Domain.Ratings.Commands.Handlers
 
         public async Task<RatingVm> Handle(CreateBookRating request, CancellationToken cancellationToken)
         {
-            var rating = await _ratingRepository.AddAsync(new Rating(request.Comment, request.Stars, request.UserId, null, request.BookId));
-            var book = await _bookRepository.ListAsNoTracking().FirstOrDefaultAsync(x => x.Id == request.BookId);
-            int media = 0;
-            foreach (var r in book.Ratings)
-            {
-                media += r.Stars;
-            }
-            media = media / book.Ratings.Count();
-            book.Rate = media;
-            _bookRepository.Modify(book);
+            var rating = await _ratingRepository.AddAsync(new Rating(request.Comment, request.Stars, request.UserId,request.Title,null ,request.BookId));
+            var book = await _bookRepository.ListAsNoTracking().Include(x=>x.Ratings).FirstOrDefaultAsync(x => x.Id == request.BookId);
 
             return rating.ToVm();
         }

@@ -20,7 +20,8 @@ namespace Smoos.Domain.Suggestions.Commands.Handlers
 
         public async Task<SuggestionVm> Handle(CreateSuggestion request, CancellationToken cancellationToken)
         {
-            var suggestion = await _suggestionRepository.AddAsync(new Suggestion( request.Name,request.UserId ,request.Category));
+
+            var suggestion = await _suggestionRepository.AddAsync(new Suggestion( request.Name,request.UserId ,ECategory.Movie));
             return suggestion.ToVm();
         }
     }

@@ -19,6 +19,7 @@ namespace Smoos.Domain.Works
         public string Name { get; set; }
         public string ReleaseYear { get; set; }
         public decimal Rate { get; set; }
+        public string Poster { get; set; }
         public ICollection<Rating> Ratings { get; set; }
     }
 }

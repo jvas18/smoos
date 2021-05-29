@@ -33,15 +33,18 @@ namespace Smoos.Data.Mapping
 
             builder.HasOne(x => x.Author)
                 .WithMany()
-                .HasForeignKey(x => x.ArtistId);
+                .HasForeignKey(x => x.ArtistId)
+                .IsRequired(false);
+
+            builder.Property(x => x.Poster)
+           .IsRequired()
+           .HasColumnType("varchar(max)");
 
             builder.HasOne(x => x.Album)
                 .WithMany(x => x.Songs)
                 .HasForeignKey(x => x.AlbumId)
                 .OnDelete(DeleteBehavior.NoAction);
 
-            builder.HasMany(x => x.Ratings)
-                    .WithOne();
         }
     }
 }

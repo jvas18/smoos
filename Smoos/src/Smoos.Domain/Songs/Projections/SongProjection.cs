@@ -1,5 +1,6 @@
 ﻿using Smoos.Domain.Albums.ViewModels;
 using Smoos.Domain.Artists.ViewModels;
+using Smoos.Domain.Ratings.Projections;
 using Smoos.Domain.Songs.ViewModels;
 using System;
 using System.Collections.Generic;
@@ -19,9 +20,10 @@ namespace Smoos.Domain.Songs.Projections
            Duration = entity.Duration,
            ArtistId = entity.ArtistId,
            AlbumId = entity.AlbumId,
+           Poster = entity.Poster,
            Album = entity.Album == null ? null : new AlbumVm
            {
-               Id = entity.AlbumId,
+               Id = entity.AlbumId.GetValueOrDefault(),
                Name = entity.Name,
                ArtistId = entity.Album.ArtistId
            },
@@ -29,11 +31,13 @@ namespace Smoos.Domain.Songs.Projections
            {
 
                Id = entity.ArtistId,
+               Photo = entity.Author.Photo,
                Name = entity.Author.Name
 
            },
-           Rate = entity.Rate
-         
+           Rate = entity.Rate,
+           Ratings = entity.Ratings.ToVm()
+
        });
         public static IEnumerable<SongVm> ToVm(this IEnumerable<Song> query) => query.AsQueryable().ToVm();
         public static SongVm ToVm(this Song entity) => new[] { entity }.AsQueryable().ToVm().FirstOrDefault();

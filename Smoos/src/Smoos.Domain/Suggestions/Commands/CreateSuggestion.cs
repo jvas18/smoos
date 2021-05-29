@@ -8,8 +8,8 @@ namespace Smoos.Domain.Suggestions.Commands
 {
     public class CreateSuggestion : IRequest<SuggestionVm>
     {
-        public string Name { get; set; }
         public Guid UserId { get; set; }
-        public ECategory Category { get; set; }
+        public string Name { get; set; }
+        public ECategory? Category { get; set; }
     }
 }

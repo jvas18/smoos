@@ -10,7 +10,7 @@
         </div>
         <div class="movie">
             <div class="movie-title">
-                <h1>Vingadores: Ultimato</h1>
+                <h1>{{movie?.name}}</h1>
                 <a (click)="favoriteWork()"><img style="padding-top: 5px; cursor: pointer;" src="../../../../assets/icons/normal-heart.svg"></a>
                 <section *ngIf="option == 'favorited-heart'">
                     <img style="padding-top: 5px; cursor: pointer;" src="../../../../assets/icons/liked-heart-purple-green.svg">
@@ -19,52 +19,28 @@
             <div class="movie-info-1">
                 <div>
                     <span>Ano de Lançamento:</span> <br>
-                    <span style="font-weight: bold;">2019</span>
+                    <span style="font-weight: bold;">{{movie?.releaseYear}}</span>
                 </div>
                 <div>
                     <span>Duração:</span> <br>
-                    <span style="font-weight: bold;">3h 2min</span>
+                    <span style="font-weight: bold;">{{movie?.duration}}</span>
                 </div>
             </div>
             <div class="movie-info-2">
                 <div>
                     <span>Gênero:</span> <br>
-                    <span style="font-weight: bold;">Ação, Aventura, Fantasia</span>
+                    <span style="font-weight: bold;">{{movie?.movieGenres}}</span>
                 </div>
                 <div>
                     <span>País:</span> <br>
-                    <span style="font-weight: bold;">Estados Unidos</span>
+                    <span style="font-weight: bold;">{{movie?.country}}</span>
                 </div>
             </div>
             <h4>Cast:</h4>
             <div class="cast">
-                <div class="artist-info">
+                <div class="artist-info" *ngFor="let artist of movie?.actors">
                     <div class="artist-pic"></div>
-                    <span style="font-weight: bold; margin-bottom: 20px; text-align: center;">Chris Evans</span>
-                </div>
-                <div class="artist-info">
-                    <div class="artist-pic"></div>
-                    <span style="font-weight: bold; padding-top: 5px; text-align: center;">Chris Hemsworh</span>
-                </div>
-                <div class="artist-info">
-                    <div class="artist-pic"></div>
-                    <span style="font-weight: bold; padding-top: 5px; text-align: center;">Scarlett Johansson</span>
-                </div>
-                <div class="artist-info">
-                    <div class="artist-pic"></div>
-                    <span style="font-weight: bold; padding-top: 5px; text-align: center;">Robert Downey Jr.</span>
-                </div>
-                <div class="artist-info">
-                    <div class="artist-pic"></div>
-                    <span style="font-weight: bold; margin-bottom: 20px; text-align: center;">Brie Larson</span>
-                </div>
-                <div class="artist-info">
-                    <div class="artist-pic"></div>
-                    <span style="font-weight: bold; margin-bottom: 20px; text-align: center;">Mark Ruffalo</span>
-                </div>
-                <div class="artist-info">
-                    <div class="artist-pic"></div>
-                    <span style="font-weight: bold; padding-top: 5px; text-align: center;">Jeremy Renner</span>
+                    <span style="font-weight: bold; margin-bottom: 20px; text-align: center;">{{artist?.name}}</span>
                 </div>
                 <div class="artist-info">
                     <img style="cursor: pointer;" src="../../../../assets/icons/right-arrow-purple.svg">
@@ -75,149 +51,29 @@
     <div class="summary">
         <h4>Sinopse:</h4>
         <div style="padding-left: 30px; padding-right: 30px; padding-bottom: 20px;">
-            <span>Em Vingadores: Ultimato, após Thanos eliminar metade das criaturas vivas em Vingadores: Guerra Infinita, os heróis precisam lidar com a dor da perda de amigos e seus entes queridos. Com Tony Stark (Robert Downey Jr.) vagando perdido no espaço sem água nem comida, o Capitão América/Steve Rogers (Chris Evans) e a Viúva Negra/Natasha Romanov (Scarlett Johansson) precisam liderar a resistência contra o titã louco.</span>
+            <span>{{movie.summary}}</span>
         </div>
     </div>
     <h4>Avaliações:</h4>
     <div class="avaliation-and-form">
         <div class="avaliations">
-            <div class="comment-box">
+            <div class="comment-box" *ngFor="let rate of ratings">
                 <div class="user-info">
                     <div class="user-icon"></div>
-                    <span style="padding-top: 5px; text-align: center;">Júlia Dias</span>
+                    <span style="padding-top: 5px; text-align: center;">{{rate.user?.name}}</span>
                 </div>
                 <div class="comment-division"></div>
                 <div class="comment-info">
                     <div class="comment-title">
-                        <h5>Filme Incrível!!</h5>
-                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
-                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
+                        <h5>{{rate.title}}</h5>
+                        <span style="color: #C4C4C4; padding-left: 3px;">{{rate?.createdAt | date: 'dd/MM/yyyy' : 'UTC'}}</span>
+                        <p-rating [style]="'padding-left: 10px; padding-top: 0px;'" [(ngModel)]="rate.stars" readonly="true" [cancel]="false"></p-rating>
                     </div>
                     <!-- <div class="comment-rating">
                         <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
                     </div> -->
                     <div class="comment">
-                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
-                    </div>
-                </div>
-            </div>
-            <div class="comment-box">
-                <div class="user-info">
-                    <div class="user-icon"></div>
-                    <span style="padding-top: 5px; text-align: center;">Júlia Dias</span>
-                </div>
-                <div class="comment-division"></div>
-                <div class="comment-info">
-                    <div class="comment-title">
-                        <h5>Filme Incrível!!</h5>
-                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
-                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
-                    </div>
-                    <!-- <div class="comment-rating">
-                        <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
-                    </div> -->
-                    <div class="comment">
-                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
-                    </div>
-                </div>
-            </div>
-            <div class="comment-box">
-                <div class="user-info">
-                    <div class="user-icon"></div>
-                    <span style="padding-top: 5px; text-align: center;">Júlia Dias</span>
-                </div>
-                <div class="comment-division"></div>
-                <div class="comment-info">
-                    <div class="comment-title">
-                        <h5>Filme Incrível!!</h5>
-                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
-                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
-                    </div>
-                    <!-- <div class="comment-rating">
-                        <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
-                    </div> -->
-                    <div class="comment">
-                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
-                    </div>
-                </div>
-            </div>
-            <div class="comment-box">
-                <div class="user-info">
-                    <div class="user-icon"></div>
-                    <span style="padding-top: 5px; text-align: center;">Júlia Dias</span>
-                </div>
-                <div class="comment-division"></div>
-                <div class="comment-info">
-                    <div class="comment-title">
-                        <h5>Filme Incrível!!</h5>
-                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
-                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
-                    </div>
-                    <!-- <div class="comment-rating">
-                        <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
-                    </div> -->
-                    <div class="comment">
-                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
-                    </div>
-                </div>
-            </div>
-            <div class="comment-box">
-                <div class="user-info">
-                    <div class="user-icon"></div>
-                    <span style="padding-top: 5px; text-align: center;">Júlia Santiago</span>
-                </div>
-                <div class="comment-division"></div>
-                <div class="comment-info">
-                    <div class="comment-title">
-                        <h5>Filme Incrível!!</h5>
-                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
-                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
-                    </div>
-                    <!-- <div class="comment-rating">
-                        <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
-                    </div> -->
-                    <div class="comment">
-                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
-                    </div>
-                </div>
-            </div>
-            <div class="comment-box">
-                <div class="user-info">
-                    <div class="user-icon"></div>
-                    <span style="padding-top: 5px; text-align: center;">Júlia Santiago</span>
-                </div>
-                <div class="comment-division"></div>
-                <div class="comment-info">
-                    <div class="comment-title">
-                        <h5>Filme Incrível!!</h5>
-                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
-                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
-                    </div>
-                    <!-- <div class="comment-rating">
-                        <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
-                    </div> -->
-                    <div class="comment">
-                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
-                    </div>
-                </div>
-            </div>
-            <div class="comment-box">
-                <div class="user-info">
-                    <div class="user-icon"></div>
-                    <span style="padding-top: 5px; text-align: center;">Júlia Santiago</span>
-                </div>
-                <div class="comment-division"></div>
-                <div class="comment-info">
-                    <div class="comment-title">
-                        <h5>Filme Incrível!!</h5>
-                        <span style="color: #C4C4C4; padding-left: 3px;">— 29/10/2019</span>
-                        <img style="padding-left: 10px; padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
-                    </div>
-                    <!-- <div class="comment-rating">
-                        <img style="padding-top: 0px;" src="../../../../assets/icons/comment-rating.svg">
-                    </div> -->
-                    <div class="comment">
-                        <span>Gostei muito to filme, tem muita ação e, apesar de ser grande, a hora passa rápido quando se está assistindo! Melhor filme dos vingadores. Uma mistura de felicidade, angústia e loucura!! #TeamCapitain</span>
+                        <span>{{rate?.comment}}</span>
                     </div>
                 </div>
             </div>
@@ -235,10 +91,10 @@
                 </div>
                 <div class="campos">
                     <label class="label" for="comment">Pontuação:*</label>
-                    <p-rating [(ngModel)]="val" formControlName="rating" required [cancel]="false"></p-rating>
+                    <p-rating formControlName="stars" required [cancel]="false"></p-rating>
                 </div>
                 <div style="padding-left: 250px; ">
-                    <button id="button" type="submit">Enviar</button>
+                    <button id="button" type="submit" (click)="save()">Enviar</button>
                 </div>
             </form>
         </div>

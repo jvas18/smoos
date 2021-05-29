@@ -25,16 +25,7 @@ namespace Smoos.Domain.Ratings.Commands.Handlers
 
         public async Task<RatingVm> Handle(CreateAlbumRating request, CancellationToken cancellationToken)
         {
-            var rating = await _ratingRepository.AddAsync(new Rating(request.Comment, request.Stars, request.UserId, null, null, null, request.AlbumId));
-            var album = await _albumRepository.ListAsNoTracking().FirstOrDefaultAsync(x => x.Id == request.AlbumId);
-            int media = 0;
-            foreach (var r in album.Ratings)
-            {
-                media += r.Stars;
-            }
-            media = media / album.Ratings.Count();
-            album.Rate = media;
-            _albumRepository.Modify(album);
+            var rating = await _ratingRepository.AddAsync(new Rating(request.Comment, request.Stars, request.UserId,request.Title, null, null, null, request.AlbumId));
 
             return rating.ToVm();
         }

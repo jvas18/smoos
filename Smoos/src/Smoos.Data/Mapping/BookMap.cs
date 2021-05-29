@@ -30,6 +30,10 @@ namespace Smoos.Data.Mapping
             .IsRequired()
             .HasColumnType("varchar(10)");
 
+            builder.Property(x => x.Poster)
+           .IsRequired()
+           .HasColumnType("varchar(max)");
+
             builder.Property(x => x.Publisher)
                  .IsRequired()
                  .HasColumnType("varchar(20)");
@@ -40,9 +44,6 @@ namespace Smoos.Data.Mapping
             builder.HasOne(x => x.Author)
                 .WithMany()
                 .HasForeignKey(x => x.ArtistId);
-
-            builder.HasMany(x => x.Ratings)
-            .WithOne();
         }
     }
 }
