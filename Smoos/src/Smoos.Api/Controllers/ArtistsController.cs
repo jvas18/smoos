@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Smoos.Domain.Artists;
 using Smoos.Domain.Artists.Command;
+using Smoos.Domain.Artists.Projections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -31,7 +32,12 @@ namespace Smoos.Api.Controllers
         [HttpGet]
         public async Task<IActionResult> Get()
         {
-            return await Task.FromResult(Ok((_artistRepository.ListAsNoTracking())));
+            return await Task.FromResult(Ok((_artistRepository.ListAsNoTracking().ToVm())));
+        }
+        [HttpGet("{id:guid}")]
+        public async Task<IActionResult> Get(Guid id)
+        {
+            return await Task.FromResult(Ok((_artistRepository.ListAsNoTracking(x => x.Id == id).FirstOrDefault().ToVm())));
         }
     }
 }

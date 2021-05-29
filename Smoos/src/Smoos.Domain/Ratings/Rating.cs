@@ -15,7 +15,6 @@ namespace Smoos.Domain.Ratings
             Id = Guid.NewGuid();
             Comment = comment;
             Stars = stars;
-            User = user;
             UserId = userId;
             MovieId = movieId;
             BookId = bookId;

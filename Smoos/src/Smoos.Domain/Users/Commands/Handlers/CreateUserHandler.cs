@@ -1,4 +1,5 @@
 ﻿using MediatR;
+using Smoos.Domain.Common;
 using Smoos.Domain.Users.Projections;
 using Smoos.Domain.Users.ViewModels;
 using System;
@@ -30,7 +31,7 @@ namespace Smoos.Domain.Users.Commands.Handlers
 
             }
 
-            var password = request.Password.GetHashCode().ToString();
+            var password = PasswordUtils.Hash(request.Password);
             var user = await _userRepository.AddAsync(new User(Guid.NewGuid(), request.Name, request.Email, password, request.Picture, request.UserProfile));
 
             return user.ToVm();

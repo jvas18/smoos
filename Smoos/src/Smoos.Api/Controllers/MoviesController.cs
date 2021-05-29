@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Smoos.Domain.Movies;
 using Smoos.Domain.Movies.Commands;
+using Smoos.Domain.Movies.Projections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -28,6 +29,12 @@ namespace Smoos.Api.Controllers
             return command == null ?
               UnprocessableEntity()
               : Ok(await _mediator.Send(command));
+        }
+
+        [HttpGet("{id:guid}")]
+        public async Task<IActionResult> Get(Guid id)
+        {
+            return await Task.FromResult(Ok((_movieRepository.ListAsNoTracking(x => x.Id == id).FirstOrDefault().ToVm())));
         }
     }
 }

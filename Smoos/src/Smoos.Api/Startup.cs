@@ -18,6 +18,7 @@ using System.Threading.Tasks;
 using Microsoft.EntityFrameworkCore.SqlServer;
 using Microsoft.EntityFrameworkCore;
 using Smoos.Api._Config;
+using Smoos.Domain.Common._Config;
 
 namespace Smoos.Api
 {
@@ -37,6 +38,9 @@ namespace Smoos.Api
         public void ConfigureServices(IServiceCollection services)
         {
 
+            Configuration.ConfigureEnvVariables<AppConfig>(services)
+               .ConfigureEnvVariables<JwTokenConfig>(services);
+
             services.AddControllers();
             services.AddDbContext<SmoosContext>(options =>
             {
@@ -46,7 +50,6 @@ namespace Smoos.Api
                     options.EnableSensitiveDataLogging(true);
             });
             services.AddScoped<SmoosContext>();
-            services.AppAddAuthorization(Configuration, Env);
             services.AppAddMediator();
             services.AddCors(options =>
             {
@@ -60,7 +63,7 @@ namespace Smoos.Api
                         });
             });
             services.AppAddIoCServices(Configuration, Env);
-           
+            services.AppAddAuthorization(Configuration, Env);
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "WebApplication1", Version = "v1" });
@@ -84,6 +87,7 @@ namespace Smoos.Api
             app.UseAuthorization();
             app.UseCors("AllowSpecificOrigin");
             app.UseAuthorization();
+            
 
             app.UseEndpoints(endpoints =>
             {

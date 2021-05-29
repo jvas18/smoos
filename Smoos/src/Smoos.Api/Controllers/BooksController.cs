@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Smoos.Domain.Books;
 using Smoos.Domain.Books.Commands;
+using Smoos.Domain.Books.Projections;
 using Smoos.Domain.Movies.Commands;
 using System;
 using System.Collections.Generic;
@@ -29,6 +30,11 @@ namespace Smoos.Api.Controllers
             return command == null ?
               UnprocessableEntity()
               : Ok(await _mediator.Send(command));
+        }
+        [HttpGet("{id:guid}")]
+        public async Task<IActionResult> Get(Guid id)
+        {
+            return await Task.FromResult(Ok((_booksRepository.ListAsNoTracking(x => x.Id == id).FirstOrDefault().ToVm())));
         }
     }
 }

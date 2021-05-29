@@ -35,13 +35,6 @@ namespace Smoos.Api.Controllers
         }
 
         
-        //[HttpPut("{id:guid}")]
-        //public async Task<IActionResult> Put([FromRoute] Guid id, [FromBody] UpdateProject command)
-        //{
-        //    if (command == null) return UnprocessableEntityResponse();
-        //    command.Id = id;
-        //    return CreatedResponse(await _mediator.Send(command));
-        //}
 
         [HttpGet("{id:guid}")]
         public async Task<IActionResult> Get([FromRoute] Guid id)
@@ -51,35 +44,6 @@ namespace Smoos.Api.Controllers
             return await Task.FromResult(
                Ok(project));
         }
-
-        [HttpPost("/auth")]
-        public async Task<IActionResult> Auth(
-           [FromServices] JwTokenService service,
-           [FromBody] Login command)
-        {
-            if (command == null) return NotFound();
-            var result = await _mediator.Send(command);
-           // service.Generate(result.SessionUser.Profile, ref result);
-            return Ok(result);
-        }
-
-
-
-        //[HttpGet]
-        //public async Task<IActionResult> Get()
-        //{
-        //    var where = _.Where(filter);
-
-        //    var pagedList = new PagedList<ProjectVm>
-        //    (
-        //        _projectRepository.ListAsNoTracking(where, filter).ToVm(),
-        //        await _projectRepository.CountAsync(where),
-        //        filter.PageSize
-
-        //    );
-
-        //    return OkResponse(pagedList);
-        //}
 
 
     }

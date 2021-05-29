@@ -21,11 +21,6 @@ namespace Smoos.Domain.Users.Commands.Handlers
         {
             var user = await _userRepository.FindAsNoTrackingAsync(x=>x.Email == request.Email);
 
-            //if (user == null)
-            //    throw new DomainException(AppMessages.InvalidCredentials);
-
-            //if (!user.PasswordIsValid(request.Password))
-            //    throw new DomainException(AppMessages.InvalidCredentials);
 
             return new AuthenticatedUserResult
             {

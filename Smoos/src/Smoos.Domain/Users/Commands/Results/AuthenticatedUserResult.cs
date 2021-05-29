@@ -7,6 +7,7 @@ namespace Smoos.Domain.Users.Commands.Results
 {
     public class AuthenticatedUserResult : JwToken
     {
+
         public SessionUser SessionUser { get; set; }
     }
 }

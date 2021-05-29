@@ -21,6 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="NovaPasta\" />
     <Folder Include="Users\Messages\" />
   </ItemGroup>
 

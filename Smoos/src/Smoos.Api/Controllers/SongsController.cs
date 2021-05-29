@@ -2,6 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Smoos.Domain.Songs;
 using Smoos.Domain.Songs.Commands;
+using Smoos.Domain.Songs.Projections;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -27,6 +28,11 @@ namespace Smoos.Api.Controllers
             return command == null ?
               UnprocessableEntity()
               : Ok(await _mediator.Send(command));
+        }
+        [HttpGet("{id:guid}")]
+        public async Task<IActionResult> Get(Guid id)
+        {
+            return await Task.FromResult(Ok((_songsRepository.ListAsNoTracking(x => x.Id == id).FirstOrDefault().ToVm())));
         }
     }
 }

@@ -41,7 +41,6 @@ export class RegisterMovieComponent implements OnInit {
     this.movieService.create(this.form.value).pipe(
     ).subscribe(resp => {
     });
-
   }
 
 

@@ -4,12 +4,13 @@ using Jwks.Manager.Interfaces;
 using Microsoft.IdentityModel.JsonWebTokens;
 using Microsoft.IdentityModel.Tokens;
 using Smoos.Domain.Common._Config;
+using Smoos.Domain.Common.Contracts;
 using Smoos.Domain.Common.Models;
 
 namespace Smoos.Domain.Common.Security
 {
-    public class JwTokenService
-    {
+    public class JwTokenService : IJwtService
+	{
 		private readonly JwTokenConfig _jwTokenConfig;
 		private readonly IJsonWebKeySetService _jsonWebKeySetService;
 
@@ -19,9 +20,8 @@ namespace Smoos.Domain.Common.Security
 			_jsonWebKeySetService = jsonWebKeySetService;
 		}
 
-		public virtual void Generate<T>(ClaimsIdentity identity, ref T jwToken, int? expirationHours = null) where T : JwToken
+		public virtual void Generate<T>(ClaimsIdentity identity, ref T jwToken) where T : JwToken
 		{
-			expirationHours ??= _jwTokenConfig.ExpirationHours;
 
 			if (jwToken == null)
 				throw new ArgumentException("jwToken objetc is null");
@@ -35,7 +35,7 @@ namespace Smoos.Domain.Common.Security
 				SigningCredentials = _jsonWebKeySetService.GetCurrent(),
 				Subject = identity,
 				NotBefore = DateTime.UtcNow,
-				Expires = DateTime.UtcNow.AddHours(expirationHours.Value)
+				Expires = DateTime.UtcNow.AddHours(_jwTokenConfig.ExpirationHours)
 			};
 
 			jwToken.AccessToken = handler.CreateToken(descriptor);
